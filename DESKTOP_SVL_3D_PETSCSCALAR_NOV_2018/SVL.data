@@ -1,0 +1,10 @@
+a = 1
+Nx = 16
+Sx = 1
+NM = 13
+NPx = 5
+NGP = 5
+BC[0] = 1
+BC[1] = 1
+BC[2] = 1
+Switch_Cood_Sys = C

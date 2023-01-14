@@ -1,0 +1,329 @@
+1. Login into Stampede:
+        Open a terminal
+	Log in:
+		henry@bluebottle:~$ ssh hmoncada@stampede.tacc.utexas.edu
+                username@stampede.tacc.utexas.edu's password:
+
+        Find Folder 
+		login2.stampede$ pwd
+		/home1/02817/hmoncada/SVL/SVL_V_3_1_PETSC_TACC
+
+
+2. Clean trash in the Folder:
+	login2.stampede$ vi SVL_Clean.sh
+
+		rm OUTPUT_*.mat
+		rm OUTPUT_*
+		rm log.txt
+		rm my_job_err.*
+		rm my_job_out.*
+		rm *.o
+
+	login2.stampede$ bash SVL_Clean.sh
+
+3.1 Module available:
+login2.stampede(15)$ module avail petsc
+
+-------------------------------------------------------------------------------- /opt/apps/intel15/mvapich2_2_1/modulefiles ---------------------------------------------------------------------------------
+   petsc/3.5-complex            petsc/3.5-debug       petsc/3.6-complexdebug       petsc/3.6-cxxi64      petsc/3.6-unidebug            petsc/3.7-cxxcomplexdebug    petsc/3.7-i64
+   petsc/3.5-complexdebug       petsc/3.5-single      petsc/3.6-cxx                petsc/3.6-debug       petsc/3.6              (D)    petsc/3.7-cxxdebug           petsc/3.7-single
+   petsc/3.5-cxx                petsc/3.5-uni         petsc/3.6-cxxcomplex         petsc/3.6-i64debug    petsc/3.7-complex             petsc/3.7-cxxi64debug        petsc/3.7-uni
+   petsc/3.5-cxxcomplex         petsc/3.5-unidebug    petsc/3.6-cxxcomplexdebug    petsc/3.6-i64         petsc/3.7-complexdebug        petsc/3.7-cxxi64             petsc/3.7-unidebug
+   petsc/3.5-cxxcomplexdebug    petsc/3.5             petsc/3.6-cxxdebug           petsc/3.6-single      petsc/3.7-cxx                 petsc/3.7-debug              petsc/3.7
+   petsc/3.5-cxxdebug           petsc/3.6-complex     petsc/3.6-cxxi64debug        petsc/3.6-uni         petsc/3.7-cxxcomplex          petsc/3.7-i64debug
+   
+  Where:
+   D:  Default Module
+   
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+login2.stampede(16)$ module avail fftw3
+
+-------------------------------------------------------------------------------- /opt/apps/intel15/mvapich2_2_1/modulefiles ---------------------------------------------------------------------------------
+   fftw3/3.3.4 (L)
+   
+  Where:
+   L:  Module is loaded
+   
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+login2.stampede(17)$ module avail mpip
+
+-------------------------------------------------------------------------------- /opt/apps/intel15/mvapich2_2_1/modulefiles ---------------------------------------------------------------------------------
+   mpip/3.4.1
+   
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+3.2 Loading modules:
+
+	login2.stampede$ module load fftw3
+	login2.stampede$ module load petsc/3.7-complex
+	login2.stampede$ module load mpip
+	login2.stampede$ module list
+
+login3.stampede(20)$ module list
+
+Currently Loaded Modules:
+  1) intel/15.0.2   2) mvapich2/2.1   3) xalt/0.6   4) TACC   5) petsc/3.7-complex   6) fftw3/3.3.4   7) mpip/3.4.1
+
+
+4. Build the executable file OUTPUT_PETSC
+
+	login2.stampede(38)$ vi Makefile 
+
+	CFLAGS           = -I/home1/apps/intel15/mvapich2_2_1/fftw3/3.3.4/include:q
+	FPPFLAGS         =
+	LOCDIR           =                                      # Working folder
+	EXAMPLESC        =                                      # *.c or *.cpp file names here
+	EXAMPLESF        =
+	MANSEC           =
+	LIBS             = -L/home1/apps/intel15/mvapich2_2_1/fftw3/3.3.4/lib -lfftw3 -lm -L\${TACC_MPIP_LIB} -lmpiP                    # libraries
+	MPI_LIBS         = -L/home1/apps/intel15/mvapich2_2_1/fftw3/3.3.4/lib -lfftw3_mpi -lfftw3 -lm   -L\${TACC_MPIP_LIB} -lmpiP     # libraries      
+	TRASH            :=  *.*~  *~  *.o
+
+	# SVL_PETSC_DFT_01.c SVL_PETSC_DFT_02.c SVL_PETSC_DFT_03.c
+	# Note: PETSC main -> SVL_PETSC_DFT_MAIN.c
+	# 27 files
+
+	SOURCE_PETSC     := SVL_PETSC_DFT_MAIN.c\
+		            SVL_PETSC_Zero_Unit_Cell.c\
+		            SVL_PETSC_Unit_Cell.c\
+		            SVL_PETSC_FFTW.c\
+		            SVL_PETSC_IFFTW.c\
+		            SVL_PETSC_Swap_Quadrants.c\
+		            SVL_PETSC_Truncate_FFTW_Spatial_Harmonic.c\
+		            SVL_PETSC_Eliminat_Grating_Accord_Their_Amplitud.c\
+		            SVL_PETSC_Grading_Vector.c\
+		            SVL_PETSC_Identified_Collinear_Planar_Grating.c\
+		            SVL_PETSC_Implement_Improvements.c\
+		            SVL_PETSC_Orientation_Function.c\
+		            SVL_PETSC_fdder.c\
+		            SVL_PETSC_LOOP.c\
+		            SVL_PETSC_Orientation_Vector.c\
+		            SVL_PETSC_Cartesian_To_Polar.c\
+		            SVL_PETSC_Rotation.c\
+		            SVL_PETSC_Polar_To_Cartesian.c\
+		            SVL_PETSC_RHS.c\
+		            SVL_PETSC_Print_Real.c\
+		            SVL_PETSC_Print_Complex.c\
+		            SAVE_1D_To_2D_ARRAY.c\
+		            SAVE_1D_To_2D_ARRAY_Complex.c\
+		            SVL_PETSC_Lattice_Spacing_Function.c\
+		            SVL_PETSC_Spacing.c\
+
+	OBJECTS_PETSC    := $(SOURCE_PETSC:.c=.o)
+	EXECUTABLE_PETSC := EXECUTABLE_OUTPUT_PETSC
+
+	# Version 3.6.2: User makefiles must be updated. You must change the lines
+	include ${PETSC_DIR}/lib/petsc/conf/variables
+	include ${PETSC_DIR}/lib/petsc/conf/rules
+
+	SVL_PETSC: $: $(OBJECTS_PETSC) chkopts
+		-${CLINKER} -g -o $(EXECUTABLE_PETSC) $(OBJECTS_PETSC) ${LIBS} ${PETSC_LIB} 
+		 ${RM} $(OBJECTS_PETSC) $(TRASH)
+
+5. Compile PESTC: make compile and output the executable file OUT_PETSC
+
+	login2.stampede(38)$ make SVL_PETSC
+
+6. Check if the executable EXECUTABLE_OUTPUT_PETSC was built:
+
+	login2.stampede(37)$ ll
+		total 221
+		-rw------- 1 hmoncada G-815332  1043 Dec 10 18:59 job.sh
+		-rw------- 1 hmoncada G-815332  2032 Dec  1 14:18 Makefile
+		-rwx------ 1 hmoncada G-815332 89825 Jan  2 19:18 EXECUTABLE_OUTPUT_PETSC
+		.
+		.
+
+7. Submitt a Job
+
+	login2.stampede$ vi job.sh 
+
+	#!/bin/bash
+	#SBATCH -A TG-ASC140011           # account name
+	#SBATCH -J my_job                 # job name
+	#SBATCH -o my_job_out.%j          # output file
+	#SBATCH -e my_job_err.%j          # error file
+	#SBATCH -N 4                      # total nodes requested
+	#SBATCH -n 8                      # total MPI tasks requested
+	#SBATCH -p development            # queue name
+	#SBATCH -t 00:120:00              # total time requested <hh:mm:ss>
+
+	#module load petsc/3.7-complex
+	#module load fftw3
+	#module load mpip
+	#module list
+
+	#export PETSC_DIR=/home1/apps/intel15/mvapich2_2_1/petsc/3.7
+	#export PETSC_ARCH=sandybridge
+
+	#make SVL_PETSC
+
+	#ibrun ./OUTPUT_PETSC -ksp_type gmres  -ksp_converged_reason > log.txt
+	#ibrun ./OUTPUT_PETSC -ksp_type bicg   -ksp_converged_reason > log.txt
+	#ibrun ./OUTPUT_PETSC -ksp_type minres -ksp_converged_reason > log.txt
+	#ibrun ./OUTPUT_PETSC -ksp_type cgs -ksp_converged_reason > log.txt
+	ibrun ./EXECUTABLE_OUTPUT_PETSC -ksp_type cg -ksp_converged_reason > log.txt
+	#ibrun ./EXECUTABLE_OUTPUT_PETSC -ksp_type lsqr -ksp_converged_reason > log.txt
+
+	#ibrun ./OUTPUT_PETSC -ksp_type cg -pc_type jacobi -ksp_converged_reason > log.txt
+
+
+	login2.stampede$ sbatch job.sh
+		-----------------------------------------------------------------
+			      Welcome to the Stampede Supercomputer              
+		-----------------------------------------------------------------
+
+		--> Verifying valid submit host (login2)...OK
+		--> Verifying valid jobname...OK
+		--> Enforcing max jobs per user...OK
+		--> Verifying availability of your home dir (/home1/02817/hmoncada)...OK
+		--> Verifying availability of your work dir (/work/02817/hmoncada)...OK
+		--> Verifying availability of your scratch dir (/scratch/02817/hmoncada)...OK
+		--> Verifying valid ssh keys...OK
+		--> Verifying access to desired queue (development)...OK
+		--> Verifying job request is within current queue limits...OK
+		--> Checking available allocation (TG-ASC140011)...OK
+		Submitted batch job 6288931
+
+
+8. Check Status
+
+		login2.stampede(39)$ showq -u hmoncada
+
+		SUMMARY OF JOBS FOR USER: <hmoncada>
+
+		ACTIVE JOBS--------------------
+		JOBID     JOBNAME    USERNAME      STATE   CORE   REMAINING  STARTTIME
+		================================================================================
+		6288944   my_job     hmoncada      Running 64       1:59:47  Sat Jan  2 19:22:19
+
+		WAITING JOBS------------------------
+		JOBID     JOBNAME    USERNAME      STATE   CORE     WCLIMIT  QUEUETIME
+		================================================================================
+
+		Total Jobs: 1     Active Jobs: 1     Idle Jobs: 0     Blocked Jobs: 0 
+
+9. Importa features for PETSC-COMPLEX
+
+	#export PETSC_DIR=/opt/apps/intel15/mvapich2_2_1/petsc/3.6
+	#export PETSC_ARCH=sandybridge
+
+
+10. Two major variables are used to increase the problem size (workload)
+
+	login2.stampede(43)$ vi SVL_PETSC_DFT_MAIN.c 
+		.
+		.
+		/*************************************************************/
+		/*                    DEFINE SPATIAL VARIANCE                */
+		/*************************************************************/
+		/* Lattice parameters */
+		  PetscInt           NPx = 11;  /* Grill of NPx x NPy Unit cell */
+		  PetscInt           NPy = NPx;
+		.
+		.
+
+	login2.stampede(43)$ vi SVL_PETSC_Orientation_Function.c 
+		.
+		.
+		  if ( RSQ[i * New_Ny + j] < 10) {
+		.
+		.
+
+
+ Compile PESTC: make compile and output the executable file OUT_PETSC
+
+	$ make SVL_PETSC
+
+11. Grap the results:
+
+        Open a terminal
+	Log in:
+		henry@bluebottle:~$ sftp username@stampede.tacc.utexas.edu
+                username@stampede.tacc.utexas.edu's password:
+
+        Find Folder 
+		sftp> cd SVL/SVL_V_2_2_PETSC_TACC
+
+	Transfer the files remotely to your Desktop PC
+
+		sftp>  get OUTPUT_*
+		Fetching /home1/02817/hmoncada/SVL/SVL_V_2_2_PETSC_TACC/OUTPUT_FFTW_IMAG to OUTPUT_FFTW_IMAG
+		/home1/02817/hmoncada/SVL/SVL_V_2_2_PETSC_TACC/OUTPUT_FFTW_IMAG   					 100%  743KB 742.9KB/s   00:00    
+		Fetching /home1/02817/hmoncada/SVL/SVL_V_2_2_PETSC_TACC/OUTPUT_FFTW_REAL to OUTPUT_FFTW_REAL
+		/home1/02817/hmoncada/SVL/SVL_V_2_2_PETSC_TACC/OUTPUT_FFTW_REAL                                          100%  743KB 743.0KB/s   00:00    
+ 		.
+		.
+12. OUTPUTs
+	-rw-rw-r--  1 henry henry 299106 Jan  2 19:47 OUTPUT_1.eps
+	-rw-rw-r--  1 henry henry  84167 Jan  2 19:47 OUTPUT_2.eps
+	-rw-------  1 henry henry 760769 Jan  2 19:41 OUTPUT_FFTW_IMAG
+	-rw-------  1 henry henry 760827 Jan  2 19:41 OUTPUT_FFTW_REAL
+	-rw-------  1 henry henry 754020 Jan  2 19:41 OUTPUT_INV_FFTW_IMAG
+	-rw-------  1 henry henry 737136 Jan  2 19:41 OUTPUT_INV_FFTW_REAL
+	-rw-------  1 henry henry    638 Jan  2 19:41 OUTPUT_KX
+	-rw-------  1 henry henry    638 Jan  2 19:41 OUTPUT_KY
+	-rw-------  1 henry henry  48510 Jan  2 19:41 OUTPUT_PER
+	-rwx------  1 henry henry  89825 Jan  2 19:41 OUTPUT_PETSC*
+	-rw-------  1 henry henry 284324 Jan  2 19:41 OUTPUT_PHI.mat
+	-rw-------  1 henry henry  57618 Jan  2 19:41 OUTPUT_RSQ
+	-rw-------  1 henry henry 599039 Jan  2 19:41 OUTPUT_S.mat
+	-rw-------  1 henry henry 760769 Jan  2 19:41 OUTPUT_SWAP_FFTW_IMAG
+	-rw-------  1 henry henry 760827 Jan  2 19:41 OUTPUT_SWAP_FFTW_REAL
+	-rw-------  1 henry henry  48510 Jan  2 19:41 OUTPUT_THETA
+	-rw-------  1 henry henry   1648 Jan  2 19:41 OUTPUT_TRUNC_FFTW_IMAG
+	-rw-------  1 henry henry   1624 Jan  2 19:41 OUTPUT_TRUNC_FFTW_REAL
+	-rw-------  1 henry henry 291090 Jan  2 19:41 OUTPUT_UC.mat
+	-rw-------  1 henry henry 262400 Jan  2 19:41 OUTPUT_UNIT_CELL
+	-rw-------  1 henry henry 262400 Jan  2 19:41 OUTPUT_ZERO_CELL
+
+13. The results can be visualizing using OCTAVE
+	henry@bluebottle:~/Desktop/PETSC/Examples/OUT$ ls -l plot_OUTPUT*
+	-rw-rw-r-- 1 henry henry 6241 Dec  1 13:22 plot_OUTPUT_ALL.m
+	-rw-r--r-- 1 henry henry 7186 Dec  2 14:03 plot_OUTPUT_figures.m
+	-rw------- 1 henry henry 4569 Jan  2 19:46 plot_OUTPUT.m
+
+	henry@bluebottle:~/Desktop/PETSC/Examples/OUT$ octave plot_OUTPUT.m
+
+Note: OUTPUTS
+Executable: 
+	-rwx------  1 henry henry  89825 Jan  2 19:41 OUTPUT_PETSC*
+
+Petsc main OUTPUTS to be plot for octave:
+	-rw-------  1 henry henry 284324 Jan  2 19:41 OUTPUT_PHI.mat
+	-rw-------  1 henry henry 291090 Jan  2 19:41 OUTPUT_UC.mat
+	-rw-------  1 henry henry 599039 Jan  2 19:41 OUTPUT_S.mat
+
+
+14. If you want to include mpiP, follow this procedure:
+
+a.1. load modules
+login3.stampede(9)$ module load petsc/3.6-complex
+login3.stampede(10)$ module load fftw3
+login3.stampede(11)$ module load mpip
+
+a.2. Compile:
+
+login3.stampede(12)$ make SVL_PETSC
+
+it create the executable file:
+login3.stampede(14)$ ls EXECUTABLE_OUTPUT_PETSC
+EXECUTABLE_OUTPUT_PETSC
+
+a. 3. Submit
+login3.stampede(15)$ sbatch job.sh 
+
+a.4.  Check if mpiP was create
+login3.stampede(19)$ ls -al *.mpiP
+-rw------- 1 hmoncada G-815332 477871 Apr 14 14:07 EXECUTABLE_OUTPUT_PETSC.16.105046.1.mpiP
+-rw------- 1 hmoncada G-815332 477871 Apr 15 10:51 EXECUTABLE_OUTPUT_PETSC.16.114893.1.mpiP
+
+

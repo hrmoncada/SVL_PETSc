@@ -1,0 +1,4224 @@
+---------------------------------------
+         SPACIAL VARIANT LATTICE       
+============= START PROGRAM ===========
+---------------------------------------
+  CYLINDRIC (C) & SPHERICAL(S)
+      SWITCH COORDINATE SYSTEM = C
+                UNIT CELL SIZE = (16, 16, 16)
+   NUMBER OF SPATIAL HARMONICS = (13, 13, 13)
+NUMBER OF UNIT CELL ON LATTICE = (5, 5, 5)
+NUMBER OF POINTS PER UNIT CELL = 5
+          OPERATOR MATRIX SIZE = (25, 25, 25)
+         FDDER OPERATOR SIZE M = 15625
+---------------------------------------
+---------------------------------------
+         SPACIAL VARIANT LATTICE       
+============= START PROGRAM ===========
+---------------------------------------
+  CYLINDRIC (C) & SPHERICAL(S)
+      SWITCH COORDINATE SYSTEM = C
+                UNIT CELL SIZE = (16, 16, 16)
+   NUMBER OF SPATIAL HARMONICS = (13, 13, 13)
+NUMBER OF UNIT CELL ON LATTICE = (5, 5, 5)
+NUMBER OF POINTS PER UNIT CELL = 5
+          OPERATOR MATRIX SIZE = (25, 25, 25)
+         FDDER OPERATOR SIZE M = 15625
+---------------------------------------
+
+STEP 1: BUILD UNI CELL-DEVICE
+---------------------------------------
+         SPACIAL VARIANT LATTICE       
+============= START PROGRAM ===========
+---------------------------------------
+  CYLINDRIC (C) & SPHERICAL(S)
+      SWITCH COORDINATE SYSTEM = C
+                UNIT CELL SIZE = (16, 16, 16)
+   NUMBER OF SPATIAL HARMONICS = (13, 13, 13)
+NUMBER OF UNIT CELL ON LATTICE = (5, 5, 5)
+NUMBER OF POINTS PER UNIT CELL = 5
+          OPERATOR MATRIX SIZE = (25, 25, 25)
+         FDDER OPERATOR SIZE M = 15625
+---------------------------------------
+
+STEP 1: BUILD UNI CELL-DEVICE
+---------------------------------------
+         SPACIAL VARIANT LATTICE       
+============= START PROGRAM ===========
+---------------------------------------
+  CYLINDRIC (C) & SPHERICAL(S)
+      SWITCH COORDINATE SYSTEM = C
+                UNIT CELL SIZE = (16, 16, 16)
+   NUMBER OF SPATIAL HARMONICS = (13, 13, 13)
+NUMBER OF UNIT CELL ON LATTICE = (5, 5, 5)
+NUMBER OF POINTS PER UNIT CELL = 5
+          OPERATOR MATRIX SIZE = (25, 25, 25)
+         FDDER OPERATOR SIZE M = 15625
+---------------------------------------
+
+STEP 1: BUILD UNI CELL-DEVICE
+
+STEP 1: BUILD UNI CELL-DEVICE
+
+STEP 2 : METHOD 1, SET 3D FFTW, SWAP AND IFFTW 
+
+   STEP 2.1: FORWARD FFTW
+
+STEP 2 : METHOD 1, SET 3D FFTW, SWAP AND IFFTW 
+
+STEP 2 : METHOD 1, SET 3D FFTW, SWAP AND IFFTW 
+
+   STEP 2.1: FORWARD FFTW
+
+   STEP 2.1: FORWARD FFTW
+
+STEP 2 : METHOD 1, SET 3D FFTW, SWAP AND IFFTW 
+
+   STEP 2.1: FORWARD FFTW
+
+   STEP 2.2: BACKWARD FFTW
+
+   STEP 2.2: BACKWARD FFTW
+
+   STEP 2.2: BACKWARD FFTW
+
+   STEP 2.2: BACKWARD FFTW
+
+   STEP 2.3: SET SWAP
+
+   STEP 2.3: SET SWAP
+
+   STEP 2.3: SET SWAP
+
+   STEP 2.3: SET SWAP
+
+STEP 3 : SET TRUNCATION ARRAY OF FFTW SPATIAL HARMONICS
+
+STEP 3 : SET TRUNCATION ARRAY OF FFTW SPATIAL HARMONICS
+
+         TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY = 2197
+
+        Truncated Harmonic Values and Vector Column AMNP(:)      
+        (m0, m1, m2, n0, n1, n2, p0, p1, p2) = (8, 2, 14, 8, 2, 14, 8, 2, 14)
+
+         TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY = 2197
+
+        Truncated Harmonic Values and Vector Column AMNP(:)      
+        (m0, m1, m2, n0, n1, n2, p0, p1, p2) = (8, 2, 14, 8, 2, 14, 8, 2, 14)
+
+STEP 3 : SET TRUNCATION ARRAY OF FFTW SPATIAL HARMONICS
+
+         TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY = 2197
+
+        Truncated Harmonic Values and Vector Column AMNP(:)      
+
+STEP 3 : SET TRUNCATION ARRAY OF FFTW SPATIAL HARMONICS
+
+         TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY = 2197
+
+        Truncated Harmonic Values and Vector Column AMNP(:)      
+        (m0, m1, m2, n0, n1, n2, p0, p1, p2) = (8, 2, 14, 8, 2, 14, 8, 2, 14)
+        (m0, m1, m2, n0, n1, n2, p0, p1, p2) = (8, 2, 14, 8, 2, 14, 8, 2, 14)
+
+   STEP 4: GRADING VECTOR (KX, KY, KZ) - WAVE VECTOR IN CARTESIAN COORDINATES
+
+   	  Writing KX(:), KY(:) and KZ(:) in a column array fashion
+
+   STEP 4: GRADING VECTOR (KX, KY, KZ) - WAVE VECTOR IN CARTESIAN COORDINATES
+
+   	  Writing KX(:), KY(:) and KZ(:) in a column array fashion
+
+   STEP 4: GRADING VECTOR (KX, KY, KZ) - WAVE VECTOR IN CARTESIAN COORDINATES
+
+   	  Writing KX(:), KY(:) and KZ(:) in a column array fashion
+
+   STEP 4: GRADING VECTOR (KX, KY, KZ) - WAVE VECTOR IN CARTESIAN COORDINATES
+
+   	  Writing KX(:), KY(:) and KZ(:) in a column array fashion
+
+STEP 5 : IMPLEMENT IMPROVEMENTS
+
+IMPROVEMENT 1 : ELIMINATION GRATING ACCORDING TO THEIR AMPLITUD
+
+STEP 5 : IMPLEMENT IMPROVEMENTS
+
+IMPROVEMENT 1 : ELIMINATION GRATING ACCORDING TO THEIR AMPLITUD
+
+        GET THRESHOLD AMPLITUD = 1078.00000
+
+        GET THRESHOLD AMPLITUD = 1078.00000
+
+        NUMBER OF HARMONICS THAN PASS THE THRESHOLD = 327
+
+        NUMBER OF HARMONICS THAN PASS THE THRESHOLD = 327
+
+(Number of iteration, array size) =( 327, 327) 
+
+ Improvements - number of iteration = 327
+
+(Number of iteration, array size) =( 327, 327) 
+
+ Improvements - number of iteration = 327
+
+STEP 5: IMPLEMENT ATTRIBUTES
+
+   STEP 6 : CyLINDRICAL  - RSQ, THETA
+
+STEP 5: IMPLEMENT ATTRIBUTES
+
+   STEP 6 : CyLINDRICAL  - RSQ, THETA
+
+STEP 5 : IMPLEMENT IMPROVEMENTS
+
+IMPROVEMENT 1 : ELIMINATION GRATING ACCORDING TO THEIR AMPLITUD
+
+STEP 5 : IMPLEMENT IMPROVEMENTS
+
+IMPROVEMENT 1 : ELIMINATION GRATING ACCORDING TO THEIR AMPLITUD
+
+        GET THRESHOLD AMPLITUD = 1078.00000
+
+        GET THRESHOLD AMPLITUD = 1078.00000
+
+        NUMBER OF HARMONICS THAN PASS THE THRESHOLD = 327
+
+        NUMBER OF HARMONICS THAN PASS THE THRESHOLD = 327
+
+(Number of iteration, array size) =( 327, 327) 
+
+ Improvements - number of iteration = 327
+
+(Number of iteration, array size) =( 327, 327) 
+
+ Improvements - number of iteration = 327
+
+STEP 5: IMPLEMENT ATTRIBUTES
+
+   STEP 6 : CyLINDRICAL  - RSQ, THETA
+
+STEP 5: IMPLEMENT ATTRIBUTES
+
+   STEP 6 : CyLINDRICAL  - RSQ, THETA
+
+   STEP 5.2: LATTICE SPACING FUNCTION 
+
+   STEP 5.2: LATTICE SPACING FUNCTION 
+
+   STEP 5.2: LATTICE SPACING FUNCTION 
+
+   STEP 5.2: LATTICE SPACING FUNCTION 
+
+STEP 12: FDDER (Finite Difference DERivative)
+
+STEP 12: FDDER (Finite Difference DERivative)
+
+STEP 12: FDDER (Finite Difference DERivative)
+
+STEP 12: FDDER (Finite Difference DERivative)
+
+STEP 13 :SPATIAL VARIANCE LOOP
+
+          TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY =  327
+
+nk = 0
+
+STEP 13 :SPATIAL VARIANCE LOOP
+
+          TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY =  327
+
+nk = 0
+
+STEP 13 :SPATIAL VARIANCE LOOP
+
+          TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY =  327
+
+nk = 0
+
+STEP 13 :SPATIAL VARIANCE LOOP
+
+          TOTAL NUMBER OF SPATIAL HARMONICS ON THE 3D TRUNCATION ARRAY =  327
+
+nk = 0
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 1
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 1
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 1
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 1
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 2
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 2
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 3
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 2
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 3
+
+nk = 2
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 4
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 4
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 3
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 3
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 5
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 5
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 4
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 4
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 6
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 6
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 5
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 5
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 7
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 7
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 6
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 6
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 8
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 8
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 7
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 7
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 9
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 9
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 8
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 8
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 10
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 10
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 9
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 9
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 11
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 11
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 10
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 10
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 12
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 12
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 11
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 11
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 13
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 13
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 12
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 12
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 14
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 14
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 13
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 13
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 15
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 15
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 14
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 14
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 16
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 16
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 15
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 15
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 17
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 17
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 16
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 16
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 18
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 18
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 17
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 17
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 19
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 19
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 18
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 18
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 20
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 20
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 19
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 19
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 21
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 21
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 20
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 20
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 22
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 22
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 21
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 21
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 23
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 23
+
+nk = 22
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 22
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 24
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 23
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 24
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 23
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 24
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 24
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 25
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 25
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 27
+
+nk = 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 28
+
+nk = 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 29
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 28
+
+nk = 29
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 29
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 30
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 29
+
+nk = 30
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 30
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 31
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 30
+
+nk = 31
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 31
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 31
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 32
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 32
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 32
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 32
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 33
+
+nk = 33
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 33
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 34
+
+nk = 34
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 33
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 34
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 35
+
+nk = 35
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 34
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 36
+
+nk = 36
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 35
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 37
+
+nk = 37
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 35
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 36
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 38
+
+nk = 38
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 36
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 39
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 39
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 37
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 40
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 38
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 37
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 40
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 41
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 39
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 38
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 42
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 40
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 41
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 43
+
+nk = 42
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 39
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 41
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 43
+
+nk = 44
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 40
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 42
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 44
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 45
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 41
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 45
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 46
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 43
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 46
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 47
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 42
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 44
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 47
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 48
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 43
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 45
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 48
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 49
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 44
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 46
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 49
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 50
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 45
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 47
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 50
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 51
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 46
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 48
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 51
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 52
+
+nk = 47
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 49
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 52
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 53
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 48
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 50
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 53
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 49
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 54
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 51
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 54
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 50
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 55
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 52
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 51
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 55
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 56
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 53
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 52
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 56
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 57
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 54
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 53
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 57
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 58
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 55
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 54
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 58
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 59
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 56
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 55
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 59
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 60
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 57
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 56
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 60
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 61
+
+nk = 58
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 57
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 61
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 59
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 62
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 58
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 62
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 60
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 63
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 59
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 63
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 61
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 64
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 60
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 64
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 65
+
+nk = 62
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 61
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 65
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 66
+
+nk = 63
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 62
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 66
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 64
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 67
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 63
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 67
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 65
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 68
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 64
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 68
+
+nk = 66
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 69
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 65
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 69
+
+nk = 67
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 70
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 66
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 70
+
+nk = 68
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 71
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 67
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 71
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 69
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 72
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 68
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 72
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 70
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 73
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 69
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 71
+
+nk = 73
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 70
+
+nk = 74
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 72
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 74
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 71
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 75
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 73
+
+nk = 75
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 72
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 76
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 76
+
+nk = 74
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 73
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 77
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 77
+
+nk = 75
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 74
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 78
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 78
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 76
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 75
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 79
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 79
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 77
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 76
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 80
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 78
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 80
+
+nk = 77
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 81
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 79
+
+nk = 78
+
+nk = 81
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 82
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 79
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 82
+
+nk = 80
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 83
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 80
+
+nk = 81
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 83
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 84
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 81
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 82
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 84
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 85
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 82
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 83
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 85
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 86
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 83
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 84
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 86
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 87
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 84
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 85
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 87
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 88
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 85
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 86
+
+nk = 88
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 89
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 86
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 87
+
+nk = 89
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 90
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 87
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 90
+
+nk = 88
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 91
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 88
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 91
+
+nk = 89
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 92
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 89
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 90
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 92
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 93
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 90
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 91
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 93
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 94
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 91
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 92
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 94
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 95
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 92
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 93
+
+nk = 95
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 96
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 93
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 96
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 94
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 97
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 94
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 97
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 95
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 98
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 95
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 96
+
+nk = 98
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 99
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 96
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 97
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 99
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 100
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 97
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 98
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 100
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 101
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 98
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 101
+
+nk = 99
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 102
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 99
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 102
+
+nk = 100
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 103
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 100
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 103
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 101
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 104
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 101
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 104
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 102
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 105
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 102
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 103
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 105
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 106
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 103
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 104
+
+nk = 106
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 107
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 104
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 105
+
+nk = 107
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 108
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 105
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 106
+
+nk = 108
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 109
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 106
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 109
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 107
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 110
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 107
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 110
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 108
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 111
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 108
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 109
+
+nk = 111
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 112
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 109
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 110
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 112
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 113
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 110
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 111
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 113
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 114
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 111
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 112
+
+nk = 114
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 115
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 112
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 115
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 113
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 116
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 113
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 116
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 114
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 117
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 114
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 117
+
+nk = 115
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 118
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 115
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 116
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 118
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 119
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 116
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 117
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 119
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 120
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 117
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 118
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 120
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 121
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 118
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 119
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 121
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 122
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 119
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 122
+
+nk = 120
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 123
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 120
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 123
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 121
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 124
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 121
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 124
+
+nk = 122
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 125
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 122
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 123
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 125
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 126
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 123
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 124
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 126
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 127
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 124
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 127
+
+nk = 125
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 128
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 125
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 128
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 126
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 129
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 126
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 129
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 127
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 130
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 127
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 128
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 130
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 128
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 131
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 129
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 131
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 129
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 132
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 130
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 132
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 131
+
+nk = 130
+
+nk = 133
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 133
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 134
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 132
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 131
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 134
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 135
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 133
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 132
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 135
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 136
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 134
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 133
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 137
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 136
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 135
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 134
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 138
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 137
+
+nk = 136
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 135
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 139
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 138
+
+nk = 137
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 136
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 140
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 139
+
+nk = 138
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 137
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 141
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 139
+
+nk = 140
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 138
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 142
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 141
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 140
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 139
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 143
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 141
+
+nk = 142
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 140
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 144
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 142
+
+nk = 143
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 141
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 145
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 143
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 142
+
+nk = 144
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 146
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 143
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 145
+
+nk = 144
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 147
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 146
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 145
+
+nk = 144
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 148
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 146
+
+nk = 147
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 145
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 149
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 146
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 147
+
+nk = 148
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 150
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 149
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 147
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 148
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 151
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 149
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 150
+
+nk = 148
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 152
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 149
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 150
+
+nk = 151
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 153
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 150
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 152
+
+nk = 151
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 154
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 153
+
+nk = 151
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 152
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 155
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 152
+
+nk = 153
+
+nk = 154
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 156
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 153
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 155
+
+nk = 154
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 157
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 154
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 156
+
+nk = 155
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 158
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 155
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 157
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 156
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 159
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 158
+
+nk = 156
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 157
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 160
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 159
+
+nk = 158
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 157
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 161
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 158
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 160
+
+nk = 159
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 162
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 159
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 160
+
+nk = 161
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 163
+Linear solve converged due to CONVERGED_ATOL iterations 0
+
+nk = 164
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 160
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 162
+
+nk = 161
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 165
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 161
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 163
+
+nk = 162
+Linear solve converged due to CONVERGED_ATOL iterations 0
+
+nk = 164
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 166
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 162
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 163
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_ATOL iterations 0
+
+nk = 165
+
+nk = 164
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 167
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 163
+Linear solve converged due to CONVERGED_ATOL iterations 0
+
+nk = 164
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 166
+
+nk = 165
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 168
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 165
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 167
+
+nk = 166
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 169
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 166
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 168
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 167
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 170
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 167
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 169
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 168
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 171
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 170
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 168
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 169
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 172
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 171
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 169
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 170
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 173
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 172
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 170
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 171
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 174
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 173
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 171
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 172
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 175
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 173
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 174
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 172
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 174
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 176
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 175
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 173
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 175
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 176
+
+nk = 177
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 174
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 176
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 177
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 178
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 175
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 177
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 178
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 179
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 176
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 178
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 179
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 180
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 177
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 179
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 180
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 181
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 178
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 180
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 181
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 182
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 179
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 181
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 182
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 183
+
+nk = 180
+Linear solve converged due to CONVERGED_RTOL iterations 25
+
+nk = 182
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 183
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 184
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 181
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 183
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 184
+Linear solve converged due to CONVERGED_RTOL iterations 25
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 182
+
+nk = 185
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 184
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 185
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 183
+
+nk = 186
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 185
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 186
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 187
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 184
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 186
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 187
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 185
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 188
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 187
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 186
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 188
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 189
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 188
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 187
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 189
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 190
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 189
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 188
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 190
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 191
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 190
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 189
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 191
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 192
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 191
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 190
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 192
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 193
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 192
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 191
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 193
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 194
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 193
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 192
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 194
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 195
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 194
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 193
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 195
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 196
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 195
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 194
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 196
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 197
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 196
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 195
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 197
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 198
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 197
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 196
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 198
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 199
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 198
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 197
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 199
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 200
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 199
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 198
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 201
+
+nk = 200
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 200
+
+nk = 199
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 202
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 201
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 201
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 200
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 203
+
+nk = 202
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 202
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 201
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 204
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 203
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 203
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 202
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 205
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 204
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 203
+
+nk = 204
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 206
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 205
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 205
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 204
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 207
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 206
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 206
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 205
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 208
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 207
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 207
+
+nk = 206
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 209
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 208
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 208
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 207
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 210
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 209
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 209
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 208
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 211
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 210
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 210
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 209
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 212
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 211
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 211
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 210
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 213
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 212
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 212
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 211
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 214
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 213
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 213
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 212
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 215
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 214
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 214
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 213
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 216
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 215
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 215
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 214
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 217
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 216
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 215
+
+nk = 216
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 218
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 217
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 216
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 217
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 219
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 218
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 217
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 218
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 220
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 219
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 218
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 219
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 221
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 220
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 219
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 220
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 222
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 221
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 220
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 221
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 223
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 222
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 221
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 222
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 224
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 223
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 222
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 225
+
+nk = 223
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 224
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 223
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 226
+
+nk = 224
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 225
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 224
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 225
+
+nk = 227
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 226
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 225
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 226
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 228
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 227
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 226
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 227
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 229
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 228
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 227
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 228
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 230
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 229
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 228
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 231
+
+nk = 229
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 230
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 229
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 232
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 230
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 231
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 230
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 233
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 231
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 232
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 231
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 232
+
+nk = 234
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 233
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 232
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 233
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 235
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 234
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 233
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 234
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 236
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 235
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 234
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 237
+
+nk = 235
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 236
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 235
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 238
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 236
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 237
+
+nk = 236
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 239
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 237
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 237
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 238
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 240
+
+nk = 238
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 238
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 239
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 239
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 241
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 239
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 240
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 240
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 242
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 240
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 241
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 241
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 243
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 241
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 242
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 242
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 244
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 242
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 243
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 243
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 245
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 243
+
+nk = 244
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 244
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 246
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 244
+
+nk = 245
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 245
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 247
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 245
+
+nk = 246
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 246
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 248
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 247
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 246
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 247
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 249
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 247
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 248
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 248
+
+nk = 250
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 249
+
+nk = 248
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 249
+
+nk = 251
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 250
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 249
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 250
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 252
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 251
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 250
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 251
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 253
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 252
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 251
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 252
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 254
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 253
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 252
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 253
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 255
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 254
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 253
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 254
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 256
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 255
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 254
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 255
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 257
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 256
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 255
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 256
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 258
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 257
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 256
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 257
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 259
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 258
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 257
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 258
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 260
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 259
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 258
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 259
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 261
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 260
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 259
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 260
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 262
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 261
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 260
+Linear solve converged due to CONVERGED_RTOL iterations 26
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 263
+
+nk = 261
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 262
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 261
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 264
+
+nk = 262
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 263
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 262
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 263
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 265
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 264
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 263
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 264
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 266
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 265
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 264
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 265
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 267
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 266
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 265
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 266
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 268
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 267
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 266
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 267
+
+nk = 269
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 268
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 267
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 268
+
+nk = 270
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 269
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 268
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 271
+
+nk = 269
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 270
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 269
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 272
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 270
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 271
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 270
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 271
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 273
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 272
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 271
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 272
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 274
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 273
+
+nk = 272
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 275
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 273
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 274
+
+nk = 273
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 276
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 274
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 275
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 274
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 277
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 275
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 275
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 276
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 278
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 276
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 276
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 277
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 277
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 279
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 277
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 278
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 278
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 280
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 278
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 279
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 279
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 281
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 279
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 280
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 280
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 282
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 280
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 281
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 281
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 283
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 281
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 282
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 282
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 284
+
+nk = 282
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 283
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 283
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 283
+
+nk = 285
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 284
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 284
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 284
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 286
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 285
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 285
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 285
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 287
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 286
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 286
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 286
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 288
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 287
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 287
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 287
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 289
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 288
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 288
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 288
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 290
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 289
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 289
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 289
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 291
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 290
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 290
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 290
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 292
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 291
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 291
+
+nk = 291
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 293
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 292
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 292
+
+nk = 292
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 294
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 293
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 293
+
+nk = 293
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 295
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 294
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 294
+
+nk = 294
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 296
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 295
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 295
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 295
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 297
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 296
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 296
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 296
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 298
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 297
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 297
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 297
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 299
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 298
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 298
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 298
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 300
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 299
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 299
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 299
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 301
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 300
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 300
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 300
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 302
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 301
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 301
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 301
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 303
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 302
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 302
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 302
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 304
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 303
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 303
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 303
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 305
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 304
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 304
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 304
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 306
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 305
+
+nk = 305
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 305
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 307
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 306
+
+nk = 306
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 306
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 308
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 307
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 307
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 307
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 309
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 308
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 308
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 308
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 310
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 309
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 309
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 309
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 311
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 310
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 310
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 310
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 312
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 311
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 311
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 311
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 312
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 313
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 312
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 314
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 312
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 313
+
+nk = 313
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 314
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 315
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 313
+
+nk = 314
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 316
+Linear solve converged due to CONVERGED_RTOL iterations 28
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 314
+
+nk = 315
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 315
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 317
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 316
+
+nk = 315
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 316
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 318
+
+nk = 317
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 316
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 317
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 318
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 317
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 319
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 318
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 319
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 318
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 320
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 319
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 320
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 319
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 321
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 320
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 321
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 320
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 322
+Linear solve converged due to CONVERGED_RTOL iterations 27
+
+nk = 321
+Linear solve converged due to CONVERGED_RTOL iterations 27
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 321
+
+nk = 322
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 323
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 322
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 322
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 323
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 324
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 323
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 323
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 325
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 324
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 324
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 324
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 325
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 326
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 325
+Linear solve converged due to CONVERGED_RTOL iterations 26
+
+nk = 325
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 326
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+OUTPUT_PHI
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 326
+OUTPUT_S
+OUTPUT_UC
+
+nk = 327 
+
+
+============= END PROGRAM ===========
+
+    Elapsed SERIAL: 0.511090 seconds
+
+    Elapsed LOOP  : 182.143848 seconds
+
+    Elapsed FULL  : 182.654938 seconds
+
+=====================================
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+nk = 326
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+OUTPUT_PHI
+OUTPUT_S
+OUTPUT_UC
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+OUTPUT_PHI
+
+nk = 327 
+
+
+============= END PROGRAM ===========
+
+    Elapsed SERIAL: 0.523796 seconds
+
+    Elapsed LOOP  : 182.860644 seconds
+
+    Elapsed FULL  : 183.384440 seconds
+
+=====================================
+OUTPUT_S
+OUTPUT_UC
+
+nk = 327 
+
+
+============= END PROGRAM ===========
+
+    Elapsed SERIAL: 0.481019 seconds
+
+    Elapsed LOOP  : 182.759747 seconds
+
+    Elapsed FULL  : 183.240766 seconds
+
+=====================================
+Linear solve converged due to CONVERGED_RTOL iterations 28
+
+OUTPUT_PHI
+OUTPUT_S
+OUTPUT_UC
+
+nk = 327 
+
+
+============= END PROGRAM ===========
+
+    Elapsed SERIAL: 0.509721 seconds
+
+    Elapsed LOOP  : 183.390554 seconds
+
+    Elapsed FULL  : 183.900275 seconds
+
+=====================================
