@@ -1,0 +1,37 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Check you PC}{2}{section.2}
+\contentsline {section}{\numberline {3}PETSc}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}PETSC Features}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}PETSC Configuration}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}PETSC\_DIR and PETSC\_ARCH}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Set PETSC\_DIR and PETSC\_ARCH}{4}{subsection.3.4}
+\contentsline {section}{\numberline {4}PETSc - Before Start}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}PETSc - Already is nstalled your PC}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}PETSc Download}{5}{subsection.4.2}
+\contentsline {section}{\numberline {5}PETSc Need The Following Packages and Compiler}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}Install openmpi \& mpich2}{6}{subsection.5.1}
+\contentsline {section}{\numberline {6}Start PETSC configuration}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}Setting up configurations}{8}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Configuration with BLAS, LAPACK and MPI}{8}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Modes to add external package}{8}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Configuration with BLAS, LAPACK and MPI, FFTW and Scalapack}{9}{subsubsection.6.1.3}
+\contentsline {subsection}{\numberline {6.2}FFTW}{9}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Configuration with BLAS,LAPACK and MPI, FFTW, Scalapack with Complex number}{9}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Configuration with BLAS, LAPACK and MPI and FFTW and Complex Numbers}{10}{subsubsection.6.2.2}
+\contentsline {section}{\numberline {7}Build your PETSc configuration}{10}{section.7}
+\contentsline {subsection}{\numberline {7.1}Before you start your installation}{10}{subsection.7.1}
+\contentsline {section}{\numberline {8}bluebottle : Install petsc-3.5.4}{11}{section.8}
+\contentsline {section}{\numberline {9}bluebottle : Installation petsc-3.5.4 - To be Review}{15}{section.9}
+\contentsline {subsection}{\numberline {9.1}A new Folder is create}{16}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Now to check if the libraries are working}{17}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Use BASH file to untar, install and configure petsc-3.5.4}{18}{subsection.9.3}
+\contentsline {section}{\numberline {10}Fiona : Install petsc-3.5.4}{19}{section.10}
+\contentsline {section}{\numberline {11}Fiona : Install Petsc-3.7.6}{22}{section.11}
+\contentsline {section}{Appendices}{25}{Item.49}
+\contentsline {section}{\numberline {A}Compile and Execute Hello World Example}{26}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}On my Desktop PC}{26}{subsection.A.1}
+\contentsline {section}{\numberline {B}Get Examples for PETSC}{27}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}On STAMPEDE}{27}{subsection.B.1}
+\contentsline {section}{\numberline {C}Transferring Files with SFTP}{29}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Transferring Remote Files to the Local System}{29}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}Transferring Local Files to the Remote System}{29}{subsection.C.2}

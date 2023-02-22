@@ -1,0 +1,1003 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pgf}
+%\linespread{2.5}
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{3cm}
+\addtolength{\hoffset}{-2cm}
+% In case you need to adjust margins:
+\topmargin	=-0.5 in      %
+\evensidemargin	= .5 in     %
+\oddsidemargin	= .5 in      %
+\textwidth 	= 7 in        %
+\textheight 	= 9.0 in       %
+\headsep 	= 0.15 in  
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{CPS 5401/CS 5390 CPS, Fall 2014}}
+\rhead{\fancyplain{}{Henry R Moncada}}
+
+\begin{document}
+\centerline{\sc \large University of Texas at El Paso}
+\centerline{\sc \large Computational Science (CPS) }
+\vspace{1pc}
+\centerline{\sc \large A short tutorial}
+\vspace{1pc}
+\centerline{\sc \Large Install petsc-3.5.3 on my Desktop}
+\centerline{\sc \Large Show how to use PETSC on my Desktop and STAMPEDE}
+%\vspace{2pc}
+\section{References}
+\begin{verbatim}
+http://www.mcs.anl.gov/petsc/index.html
+http://www.mcs.anl.gov/petsc/index.html  -> Features
+http://www.mcs.anl.gov/petsc/documentation/installation.html
+http://acts.nersc.gov/petsc/
+http://hpc.ucla.edu/hoffman2/software/petsc.php#cpp
+http://charlesmartinreid.com/wiki/Petsc
+http://parallel-programming-quickstart.blogspot.com/2007/10/installing-petsc.html
+http://www.cise.ufl.edu/research/sparse/codes/
+\end{verbatim}
+
+\section{Introduction}	
+PETSC stand for \textbf{P}ortable, \textbf{E}xtensible \textbf{T}oolkit for \textbf{S}cientific \textbf{C}omputation. 
+it is pronounced PET-see, the S is silent. PETSC library is designed to work in both parallel and sequential codes, it is object orientated in design and is available for Linux (or Unix) and Windows.  It consists of both data structures and functions that are intended for building scientific applications.  \textbf{C, C++, Fortran} and \textbf{Python} are supported. In fact, PETSc includes a large suite of parallel linear, nonlinear equation solvers and ODE integrators that are easily used in application codes written in \textbf{C, C++, Fortran} and now \textbf{Python}. Also, PETSc is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations. It supports MPI, shared memory pthreads, and GPUs through CUDA or OpenCL, as well as hybrid MPI-shared memory pthreads or MPI-GPU parallelism.
+
+\section{PETSC Important Features}
+PETSc has built in profiling for both memory usage and floating point calculation this accompanied with progress reporting features common in many of the solvers mean that one can get a reasonable picture of a codes execution profile merely by supplying a few additional command line arguments.
+
+One of the strengths of the PETSc library is the large number of code examples it ships with. These examples are cross-referenced throughout the documentation so one can readily see an example of most significant functions along with related functions.
+
+PETSc’s key feature is the number of highly regarded solvers etc. it brings under one roof: parallel timestepping ODE solvers, parallel preconditioners, Krylov subspace methods. parallel Newton-based nonlinear solvers and interfaces to numerous other 3rd party packages.
+
+% PETSc (pronounced PET-see) library is designed to work in both parallel and sequential codes, it is object  orientated in design and is available for Unix and windows.  It consists of both data structures and functions that are intended for building scientific applications. Fortran, $C/C++$  and Python are supported. 
+% 
+% While PETSc is built on MPI it provides an abstraction layer above MPI allowing users to write parallel code using high-level routines with little concern for low level MPI operations. This short guide provides a quick introduction to some of PETSc’s capabilities.
+% 
+% Important features
+% PETSc has built in profiling for both memory usage and floating point calculation this accompanied with progress reporting features common in many of the solvers mean that one can get a reasonable picture of a codes execution profile merely by supplying a few additional command line arguments.
+% 
+% One of the strengths of the PETSc library is the large number of code examples it ships with. These examples are cross-referenced throughout the documentation so one can readily see an example of most significant functions along with related functions.
+% 
+% ETSc’s key feature is the number of highly regarded solvers etc. it brings under one roof: parallel timestepping ODE solvers, parallel preconditioners, Krylov subspace methods. parallel Newton-based nonlinear solvers and interfaces to numerous other 3rd party packages.
+% 
+% 
+% %http://www.mcs.anl.gov/petsc/index.html
+% PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations. It supports MPI, shared memory pthreads, and GPUs through CUDA or OpenCL, as well as hybrid MPI-shared memory pthreads or MPI-GPU parallelism. 
+% %http://www.mcs.anl.gov/petsc/index.html  -> Features
+% PETSc is intended for use in large-scale application projects, many ongoing computational science projects are built around the PETSc libraries. PETSc is easy to use for beginners. Moreover, its careful design allows advanced users to have detailed control over the solution process. PETSc includes a large suite of parallel linear, nonlinear equation solvers and ODE integrators that are easily used in application codes written in C, C++, Fortran and now Python. PETSc provides many of the mechanisms needed within parallel application codes, such as simple parallel matrix and vector assembly routines that allow the overlap of communication and computation. In addition, PETSc includes support for parallel distributed arrays useful for finite difference methods.
+\section{Features include}
+\begin{itemize}
+ \item     Parallel vectors
+ \begin{itemize}
+  \item includes code for communicating ghost points
+ \end{itemize}       
+ \item   Parallel matrices
+   \begin{itemize}
+  \item  several sparse storage formats
+  \item  easy, efficient assembly
+ \end{itemize}     
+\item      Scalable parallel preconditioners
+\item      Krylov subspace methods
+\item      Parallel Newton-based nonlinear solvers
+\item      Parallel timestepping (ODE) solvers
+\item      Support for Nvidia GPU cards
+\item      Complete documentation
+\item      Automatic profiling of floating point and memory usage
+\item      Consistent user interface
+\item      Intensive error checking
+\item      Portable to UNIX and Windows
+\item      Over one hundred examples
+\item      PETSc is supported and will be actively enhanced for many years
+\end{itemize}
+\section{Find out if PETSC is installed already on your PC}
+You mat install already petsc on your PC using \verb+Synaptic Package Manager+ or \verb+sudo apt-get install petsc+. If this is the case,
+you may want to know where is your PC petsc folder 
+\begin{scriptsize}\begin{verbatim}
+>> echo petcs
+petcs
+
+ >>  whereis petsc
+petsc: /usr/lib/petsc /usr/include/petsc
+
+ >> dpkg -l | grep petsc
+ii  libpetsc3.1                       3.1.dfsg-11ubuntu1                    Shared libraries for version 3.1 of PETSc
+ii  libpetsc3.1-dbg                   3.1.dfsg-11ubuntu1                    Static debugging libraries for PETSc
+ii  libpetsc3.1-dev                   3.1.dfsg-11ubuntu1                    Static libraries, shared links, header files for PETSc
+ii  petsc-dev                         3.1.dfsg-11ubuntu1                    Meta-package depending on latest PETSc development package
+ii  petsc3.1-doc                      3.1.dfsg-11ubuntu1                    Documentation and examples for PETSc
+\end{verbatim}\end{scriptsize}
+\section{Install directly using apt-get or Synaptic Package Manager}
+There many ways to install PETSC. Here are two direct way, NO RECOMMENDED. Since PETSC requiere requiere to be configure to full fill your programming needs.
+These two way will not help to acomplish that.
+\begin{itemize}
+ \item Open a terminal
+\begin{verbatim} 
+ >> sudo apt-get install petsc-dev 
+\end{verbatim}
+\item Open Synaptic Package Manager, see figure (\ref{Synaptic})
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.8\textwidth, height=.4\textwidth]{synaptic.eps}
+    \caption{Synaptic Package Manager}
+    \label{Synaptic}
+\end{figure}
+\end{itemize}
+\section{Get PETSC on the follow wedsite}
+Open a terminal and create a folder where do you want to download PETSC. For example
+\begin{scriptsize}\begin{verbatim}
+>> cd Desktop/
+>> mkdir PETSC
+>> cd PETSC
+\end{verbatim}\end{scriptsize}
+Donwload petsc into the folder PETSC
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC$ wget http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.5.3.tar.gz
+\end{verbatim}\end{scriptsize}
+Unpack PETSC in one step
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC$ gunzip -c petsc-3.5.3.tar.gz | tar -xof -
+\end{verbatim}\end{scriptsize}
+or 
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC$ tar zxvf petsc-3.5.3.tar.gz
+\end{verbatim}\end{scriptsize}
+Unpack into two steps
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC$ gunzip petsc-3.5.3.tar.gz
+henry@bluebottle:~/Desktop/PETSC$ tar xvf petsc-3.5.3.tar
+henry@bluebottle:~/Desktop/PETSC$ cd petsc-3.5.3
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ 
+\end{verbatim}\end{scriptsize}
+\section{Get Examples for PETSC}
+You use these examples to check if your PETSC installation and learn how to programming PETSC
+\begin{scriptsize}\begin{verbatim}
+>> wget http://www.mcs.anl.gov/petsc/petsc-3.4/src/ksp/ksp/examples/tutorials/
+\end{verbatim}\end{scriptsize}
+\section{PETSC\_DIR and PETSC\_ARCH} 
+Before run PETSc based program you must set two environment variables.
+\begin{itemize}
+ \item Set PETSC\_DIR, first environment variable to the path of the PETSc directory. Within this directory there is a lib directory which will have at least one subdirectory corresponding to a set of PETSc libraries built with a given configuration.
+\begin{verbatim}
+export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+\end{verbatim}
+Set PETSC\_ARCH, second environment variable is used to specify which library build within the PETSC\_DIR to use. This allows you to prepare a variety of PETSc builds e.g. optimised, debug differing MPI libraries etc. and create and run the corresponding executables while only changing the PETSC\_ARCH variable.
+\begin{verbatim}
+export PETSC_ARCH=linux-gnu-complex
+\end{verbatim}
+\end{itemize}
+\begin{itemize}
+\item \verb+PETSC_DIR+ and \verb+PETSC_ARCH+ are a couple of variables that control the configuration and build process of PETSc. These variables can be set as environment variables or specified on the command line \verb+[to both configure and make]+.
+\item \verb+PETSC_DIR+: this variable should point to the location of the PETSc installation that is used. Multiple PETSc versions can coexist on the same file-system. By changing \verb+PETSC_DIR+ value, one can switch between these installed versions of PETSc.
+\item \verb+PETSC_ARCH+: this variable gives a name to a \verb+configuration/build+. Configure uses this value to stores the generated config makefiles in \verb+${PETSC_DIR}/${PETSC_ARCH}/conf+. And make uses this value to determine this location of these makefiles [which intern help in locating the correct include and library files].
+\item Thus one can install multiple variants of PETSc libraries - by providing different \verb+PETSC_ARCH+ values to each configure build. Then one can switch between using these variants of libraries [from make] by switching the \verb+PETSC_ARCH+ value used.
+\item If configure doesn't find a \verb+PETSC_ARCH+ value [either in env variable or command line option], it automatically generates a default value and uses it. Also - if make doesn't find a \verb+PETSC_ARCH+ env variable - it defaults to the value used by last successful invocation of previous configure. 
+\end{itemize}
+
+\begin{itemize}
+\item Build Complex version of PETSc [using c++ compiler] (add the option \verb+--with-fortran-kernels=generic+ to get possibly faster complex number performance on some systems):
+\begin{tiny}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$./configure --with-cc=gcc --with-fc=gfortran --with-cxx=g++ --with-clanguage=cxx --download-fblaslapack --download-mpich --with-scalar-type=complex
+\end{verbatim}\end{tiny}
+Note that \verb+--with-clanguage=cxx+ means that the PETSc source code is compiled with the C++ compiler. This is not normally needed and we don't recommend it.
+One can use 'c' build of PETSc from both C and C++. One can also have a complex build with C99.
+\item Install 2 variants of PETSc. Specify different \verb+PETSC_ARCH+ for each build.
+\begin{itemize}
+\item With gnu
+\begin{tiny}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$./configure PETSC_ARCH=linux-gnu --with-cc=gcc --with-cxx=g++ --with-fc=gfortran --download-mpich
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$make PETSC_ARCH=linux-gnu all test
+\end{verbatim}\end{tiny}  
+\item With intel compilers (intel use mkl instead of blas and lapack).
+\begin{tiny}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$./configure PETSC_ARCH=linux-gnu-intel --with-cc=icc --with-cxx=icpc --with-fc=ifort --download-mpich --with-blas-lapack-dir=/usr/local/mkl
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$make PETSC_ARCH=linux-gnu-intel all test
+\end{verbatim}\end{tiny}
+\item BLAS/LAPACK : These packages provide some basic numeric kernels used by PETSc.
+\begin{itemize}
+\item Configure will automatically look for \verb+blas/lapack+ in certain standard locations, on most systems you should not need to provide any information about \verb+BLAS/LAPACK+ 
+in the \verb+./configure+ command.
+\item One can use the following options to let configure download/install blas/lapack automatically.
+\begin{itemize}
+\item \verb+--download-fblaslapack+ [when fortran compiler is present]
+\item \verb+--download-f2cblaslapack+ [when configuring without a fortran compiler - i.e \verb+--with-fc=0+]
+\end{itemize} 
+\item  Alternatively one can use other options like one of the following.
+\begin{itemize}
+\item \verb+--with-blas-lapack-lib=libsunperf.a+
+\item \verb+--with-blas-lib=libblas.a --with-lapack-lib=liblapack.a+
+\item \verb+--with-blas-lapack-dir=/soft/com/packages/intel/13/079/mkl+ 
+\end{itemize}  
+\end{itemize}
+\end{itemize}
+\item Specify enviornment variable for bash \verb+[can be specified in ~/.bashrc]+
+\begin{verbatim}
+export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+export PETSC_ARCH=linux-gnu-c-debug
+\end{verbatim}
+\end{itemize}
+\section{Find out if compiler names are within the \$PATH} If this is the case. No need for explicit specification on the configuration.
+\begin{footnotesize}\begin{verbatim}
+henry@bluebottle:~/Desktop$ which gcc
+/usr/bin/gcc
+henry@bluebottle:~/Desktop$ which g++
+/usr/bin/g++
+henry@bluebottle:~/Desktop$ which gfortran
+/usr/bin/gfortran
+henry@bluebottle:~/Desktop$ which mpicc
+/usr/bin/mpicc
+henry@bluebottle:~/Desktop$ which mpicxx
+/usr/bin/mpicxx
+henry@bluebottle:~/Desktop$ which mpif90
+/usr/bin/mpif90
+\end{verbatim}\end{footnotesize}
+\section{FFTW}
+\verb+--download-PACKAGENAME=/PATH/TO/package.tar.gz+: If \verb+./configure+ cannot automatically download the package [due to network/firewall issues], one can download the package by alternaive means [perhaps wget or scp via some other machine]. Once the tarfile is downloaded, the path to this file can be specified to configure with this option. Configure will proceed to install this package and then configure PETSc with it.
+
+Since FFTW need to configure for a MPI. We download fftw and set the \$PATH to be install it.  
+\begin{verbatim}
+--download-fftw=/home/henry/Desktop/FFTW/downloads_fftw/fftw-3.5.3.tar.gz
+\end{verbatim}
+
+\section{Install PETSC Manually}
+\subsection{Before you start your installation} You made want to know how your petsc folder look like because it is going to change a little.
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ ll
+total 8756
+drwxr-xr-x 12 henry henry    4096 May 23 17:42 ./
+drwxrwxr-x  7 henry henry    4096 Aug 10 10:57 ../
+drwxr-xr-x  6 henry henry    4096 May 23 17:42 bin/
+drwxr-xr-x  2 henry henry    4096 May 23 17:42 conf/
+drwxr-xr-x  5 henry henry    4096 May 23 17:42 config/
+-rwxr-xr-x  1 henry henry     340 Sep  8  2014 configure*
+-rw-r--r--  1 henry henry    1751 Sep  8  2014 CONTRIBUTING
+-rw-r--r--  1 henry henry 6336652 May 23 17:42 CTAGS
+-rw-r--r--  1 henry henry    6844 Sep  8  2014 .dir-locals.el
+drwxr-xr-x  4 henry henry    4096 May 23 17:42 docs/
+-rw-r--r--  1 henry henry    8798 May 23 10:57 gmakefile
+drwxr-xr-x  6 henry henry    4096 May 23 17:42 include/
+-rw-r--r--  1 henry henry     815 May 23 17:42 index.html
+drwxr-xr-x  3 henry henry    4096 May 23 17:42 interfaces/
+-rw-r--r--  1 henry henry    1526 Sep  8  2014 LICENSE
+-rw-r--r--  1 henry henry   27891 May 23 17:42 makefile
+-rw-r--r--  1 henry henry   34168 May 23 17:42 makefile.html
+-rwxr-xr-x  1 henry henry    9775 Jan 30  2015 setup.py*
+drwxr-xr-x  3 henry henry    4096 May 13  2013 share/
+drwxr-xr-x 12 henry henry    4096 May 23 17:42 src/
+drwxr-xr-x  3 henry henry    4096 May 13  2013 systems/
+-rw-r--r--  1 henry henry 2458233 May 23 17:42 TAGS
+drwxr-xr-x  3 henry henry    4096 May 23 17:42 tutorials/
+\end{verbatim}\end{scriptsize}
+Let's start with the installation
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ export PETSC_ARCH=linux-gnu-complex
+
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ ./configure
+===============================================================================
+             Configuring PETSc to compile on your system                       
+===============================================================================
+TESTING: alternateConfigureLibrary from PETSc.packages.mpi4py(config/PETSc/packages/mpi4py.py:56)                                                                          
+Compilers:
+  C Compiler:         mpicc  -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0 
+  C++ Compiler:       mpicxx  -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g -O0   -fPIC  
+  Fortran Compiler:   mpif90  -fPIC -Wall -Wno-unused-variable -ffree-line-length-0 -Wno-unused-dummy-argument -g -O0  
+Linkers:
+  Shared linker:   mpicc  -shared  -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0
+  Dynamic linker:   mpicc  -shared  -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0
+make:
+MPI:
+  Includes: -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi
+BLAS/LAPACK: -llapack -lblas
+X:total 21312
+drwxr-xr-x 14 henry henry     4096 Apr 27 13:43 ./
+drwxrwxr-x  6 henry henry     4096 May  1 13:28 ../
+drwxr-xr-x  6 henry henry     4096 Apr 24 10:40 bin/
+-rw-------  1 henry henry    62332 Apr 27 13:40 CMakeLists.txt
+drwxr-xr-x  2 henry henry     4096 Apr 24 10:40 conf/
+drwxr-xr-x  5 henry henry     4096 Apr 24 10:40 config/
+-rwxr-xr-x  1 henry henry      340 Sep  8  2014 configure*
+lrwxrwxrwx  1 henry henry       28 Apr 27 13:40 configure.log -> linux-dbg/conf/configure.log
+lrwxrwxrwx  1 henry henry       32 Apr 27 13:40 configure.log.bkp -> linux-dbg/conf/configure.log.bkp
+-rw-rw-r--  1 henry henry  1963859 Apr 24 23:03 configure_log.txt
+-rw-r--r--  1 henry henry     1751 Sep  8  2014 CONTRIBUTING
+-rw-r--r--  1 henry henry  6330591 Jan 31 00:14 CTAGS
+drwxrwxr-x  6 henry henry     4096 Apr 24 10:40 -dbg/
+-rw-r--r--  1 henry henry     6844 Sep  8  2014 .dir-locals.el
+drwxr-xr-x  4 henry henry     4096 Jan 31 00:14 docs/
+-rw-r--r--  1 henry henry     8681 Sep  8  2014 gmakefile
+drwxr-xr-x  6 henry henry     4096 Jan 31 00:14 include/
+-rw-r--r--  1 henry henry      816 Jan 31 00:14 index.html
+drwxr-xr-x  3 henry henry     4096 Jan 31 00:14 interfaces/
+-rw-r--r--  1 henry henry     1526 Sep  8  2014 LICENSE
+drwxrwxr-x  7 henry henry     4096 Apr 25 19:45 linux-dbg/
+-rw-r--r--  1 henry henry    27795 Jan 31 00:14 makefile
+-rw-r--r--  1 henry henry    34073 Jan 31 00:14 makefile.html
+lrwxrwxrwx  1 henry henry       23 Apr 27 13:40 make.log -> linux-dbg/conf/make.log
+-rw-rw-r--  1 henry henry        0 Apr 28 18:52 .nagged
+-rw-rw-r--  1 henry henry 10825568 Apr 27 13:40 RDict.log
+-rwxr-xr-x  1 henry henry     9775 Jan 30 23:23 setup.py*
+drwxr-xr-x  3 henry henry     4096 May 13  2013 share/
+drwxr-xr-x 12 henry henry     4096 Jan 31 00:14 src/
+drwxr-xr-x  3 henry henry     4096 May 13  2013 systems/
+-rw-r--r--  1 henry henry  2454792 Jan 31 00:14 TAGS
+drwxr-xr-x  3 henry henry     4096 Jan 31 00:14 tutorials/
+
+  Library:  -lX11
+  Arch:     
+pthread:
+  Library:  -lpthread
+ssl:
+  Library:  -lssl -lcrypto
+valgrind:
+PETSc:
+  PETSC_ARCH: linux-dbg
+  PETSC_DIR: /home/henry/Desktop/PETSC/petsc-3.5.3
+  Clanguage: C
+  shared libraries: enabled
+  Scalar type: real
+  Precision: double
+  Memory alignment: 16
+xxx=========================================================================xxx
+ Configure stage complete. Now build PETSc libraries with (gnumake build):
+   make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg all
+xxx=========================================================================xxx
+\end{verbatim}\end{scriptsize}
+Creat the object files
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make   
+.
+.
+.
+          CC linux-dbg/obj/src/tao/interface/taosolver_bounds.o
+          CC linux-dbg/obj/src/tao/interface/dlregistao.o
+          CC linux-dbg/obj/src/tao/interface/fdiff.o
+          CC linux-dbg/obj/src/tao/interface/fdtest.o
+          CC linux-dbg/obj/src/tao/interface/ftn-auto/taosolver_boundsf.o
+          CC linux-dbg/obj/src/tao/interface/ftn-auto/taosolver_fgf.o
+          CC linux-dbg/obj/src/tao/interface/ftn-auto/taosolver_hjf.o
+          CC linux-dbg/obj/src/tao/interface/ftn-auto/taosolverf.o
+          CC linux-dbg/obj/src/tao/interface/ftn-custom/ztaosolverf.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/nls/nls.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/neldermead/neldermead.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/ntr/ntr.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/cg/taocg.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/lmvm/lmvm.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/bmrm/bmrm.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/ntl/ntl.o
+          CC linux-dbg/obj/src/tao/unconstrained/impls/owlqn/owlqn.o
+          CC linux-dbg/obj/src/tao/constrained/impls/ipm/ipm.o
+          CC linux-dbg/obj/src/tao/linesearch/interface/taolinesearch.o
+          CC linux-dbg/obj/src/tao/linesearch/interface/dlregis_taolinesearch.o
+          CC linux-dbg/obj/src/tao/linesearch/interface/ftn-auto/taolinesearchf.o
+          CC linux-dbg/obj/src/tao/linesearch/interface/ftn-custom/ztaolinesearchf.o
+          CC linux-dbg/obj/src/tao/linesearch/impls/armijo/armijo.o
+          CC linux-dbg/obj/src/tao/linesearch/impls/morethuente/morethuente.o
+          CC linux-dbg/obj/src/tao/linesearch/impls/owarmijo/owarmijo.o
+          CC linux-dbg/obj/src/tao/linesearch/impls/unit/unit.o
+          CC linux-dbg/obj/src/tao/linesearch/impls/gpcglinesearch/gpcglinesearch.o
+          CC linux-dbg/obj/src/tao/leastsquares/impls/pounders/pounders.o
+          CC linux-dbg/obj/src/tao/leastsquares/impls/pounders/gqt.o
+     CLINKER /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg/lib/libpetsc.so.3.5.3
+make[2]: Leaving directory `/home/henry/Desktop/PETSC/petsc-3.5.3'
+=========================================
+make[1]: Leaving directory `/home/henry/Desktop/PETSC/petsc-3.5.3'
+Now to check if the libraries are working do:
+make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg test
+=========================================
+\end{verbatim}\end{scriptsize}
+\subsection{A new Folder is create} Folder \verb+linux-dbg+ is created
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ ll
+total 21312
+drwxr-xr-x 14 henry henry     4096 Apr 27 13:40 ./
+drwxrwxr-x  5 henry henry     4096 Apr 24 18:20 ../
+drwxr-xr-x  6 henry henry     4096 Apr 24 10:40 bin/
+-rw-------  1 henry henry    62332 Apr 27 13:40 CMakeLists.txt
+drwxr-xr-x  2 henry henry     4096 Apr 24 10:40 conf/
+drwxr-xr-x  5 henry henry     4096 Apr 24 10:40 config/
+-rwxr-xr-x  1 henry henry      340 Sep  8  2014 configure*
+lrwxrwxrwx  1 henry henry       28 Apr 27 13:40 configure.log -> linux-dbg/conf/configure.log
+lrwxrwxrwx  1 henry henry       32 Apr 27 13:40 configure.log.bkp -> linux-dbg/conf/configure.log.bkp
+-rw-rw-r--  1 henry henry  1963859 Apr 24 23:03 configure_log.txt
+-rw-r--r--  1 henry henry     1751 Sep  8  2014 CONTRIBUTING
+-rw-r--r--  1 henry henry  6330591 Jan 31 00:14 CTAGS
+drwxrwxr-x  6 henry henry     4096 Apr 24 10:40 -dbg/
+-rw-r--r--  1 henry henry     6844 Sep  8  2014 .dir-locals.el
+drwxr-xr-x  4 henry henry     4096 Jan 31 00:14 docs/
+-rw-r--r--  1 henry henry     8681 Sep  8  2014 gmakefile
+drwxr-xr-x  6 henry henry     4096 Jan 31 00:14 include/
+-rw-r--r--  1 henry henry      816 Jan 31 00:14 index.html
+drwxr-xr-x  3 henry henry     4096 Jan 31 00:14 interfaces/
+-rw-r--r--  1 henry henry     1526 Sep  8  2014 LICENSE
+drwxrwxr-x  7 henry henry     4096 Apr 25 19:45 linux-dbg/
+-rw-r--r--  1 henry henry    27795 Jan 31 00:14 makefile
+-rw-r--r--  1 henry henry    34073 Jan 31 00:14 makefile.html
+lrwxrwxrwx  1 henry henry       23 Apr 27 13:40 make.log -> linux-dbg/conf/make.log
+-rw-rw-r--  1 henry henry        0 Apr 27 13:31 .nagged
+-rw-rw-r--  1 henry henry 10825568 Apr 27 13:40 RDict.log
+-rwxr-xr-x  1 henry henry     9775 Jan 30 23:23 setup.py*
+drwxr-xr-x  3 henry henry     4096 May 13  2013 share/
+drwxr-xr-x 12 henry henry     4096 Jan 31 00:14 src/
+drwxr-xr-x  3 henry henry     4096 May 13  2013 systems/
+-rw-r--r--  1 henry henry  2454792 Jan 31 00:14 TAGS
+drwxr-xr-x  3 henry henry     4096 Jan 31 00:14 tutorials/
+\end{verbatim}\end{scriptsize}
+\subsection{Now to check if the libraries are working}
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg test
+Running test examples to verify correct installation
+Using PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 and PETSC_ARCH=linux-dbg
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 1 MPI process
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 2 MPI processes
+Fortran example src/snes/examples/tutorials/ex5f run successfully with 1 MPI process
+Completed test examples
+=========================================
+Now to evaluate the computer systems you plan use - do:
+make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg streams NPMAX=<number of MPI processes you intend to use>
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ 
+\end{verbatim}\end{scriptsize}
+Now to evaluate the computer systems you plan use-do:
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg streams NPMAX=4
+cd src/benchmarks/streams; /usr/bin/make  --no-print-directory streams
+mpicc -o MPIVersion.o -c -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0   -I/home/henry/Desktop/PETSC/petsc-3.5.3/include -I/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi    `pwd`/MPIVersion.c
+/home/henry/Desktop/PETSC/petsc-3.5.3/src/benchmarks/streams/MPIVersion.c: In function ‘main’:
+/home/henry/Desktop/PETSC/petsc-3.5.3/src/benchmarks/streams/MPIVersion.c:99:7: warning: value computed is not used [-Wunused-value]
+/home/henry/Desktop/PETSC/petsc-3.5.3/src/benchmarks/streams/MPIVersion.c:103:4: warning: value computed is not used [-Wunused-value]
+Number of MPI processes 1
+Process 0 bluebottle
+Function      Rate (MB/s) 
+Copy:       11785.8911
+Scale:      11347.4576
+Add:        13004.7537
+Triad:      12298.5090
+Number of MPI processes 2
+Process 0 bluebottle
+Process 1 bluebottle
+Function      Rate (MB/s) 
+Copy:       12171.7356
+Scale:      12082.4353
+Add:        13361.2045
+Triad:      13562.3699
+Number of MPI processes 3
+Process 0 bluebottle
+Process 1 bluebottle
+Process 2 bluebottle
+Function      Rate (MB/s) 
+Copy:       12192.0058
+Scale:      12130.3003
+Add:        13479.2845
+Triad:      13570.7497
+Number of MPI processes 4
+Process 0 bluebottle
+Process 1 bluebottle
+Process 2 bluebottle
+Process 3 bluebottle
+Function      Rate (MB/s) 
+Copy:       12592.1116
+Scale:      12085.5584
+Add:        13892.1390
+Triad:      13938.5530
+------------------------------------------------
+np  speedup
+1 1.0
+2 1.1
+3 1.1
+4 1.13
+Estimation of possible speedup of MPI programs based on Streams benchmark.
+It appears you have 1 node(s)
+See graph in the file src/benchmarks/streams/scaling.png
+\end{verbatim}\end{scriptsize}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=.8\textwidth, height=.4\textwidth]{scaling.eps}
+    \caption*{PetscScalar: Evaluate the Computer System using Real Numbers}
+    \label{checkerboard_lattice}
+\end{figure}
+\section{Complex Configuration}
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC$ cd petsc-3.5.3/
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ export PETSC_ARCH=linux-dbg-Complex
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ ./configure --with-cc=gcc --with-fc=gfortran --with-cxx=g++ --with-clanguage=cxx
+--download-fblaslapack --download-mpich --with-scalar-type=complex
+
+===============================================================================
+             Configuring PETSc to compile on your system                       
+===============================================================================
+===============================================================================                                                                                                        Trying to download http://www.mpich.org/static/downloads/3.1/mpich-3.1.tar.gz for MPI                                                                                      ===============================================================================                                                                                                  ===============================================================================                                                                                                        Running configure on MPICH; this may take several minutes                                                                                                                  ===============================================================================                                                            
+                                      ===============================================================================                                                                                                        Running make on MPICH; this may take several minutes                                                                                                                       ===============================================================================                                                                                                  ===============================================================================                                                                                                        Trying to download http://ftp.mcs.anl.gov/pub/petsc/externalpackages/fblaslapack-3.4.2.tar.gz for FBLASLAPACK                                                              ===============================================================================                      
+                                                                            ===============================================================================                                                                                                        Compiling FBLASLAPACK; this may take several minutes                                                                                                                       ===============================================================================                                                                                                  TESTING: alternateConfigureLibrary from PETSc.packages.mpi4py(config/PETSc/packages/mpi4py.py:56)                                                                                Compilers:
+  C Compiler:         /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpicc  -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0 
+  C++ Compiler:       /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpicxx   -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g -O0  -fPIC  
+  Fortran Compiler:   /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpif90  -fPIC  -Wall -Wno-unused-variable -ffree-line-length-0 -Wno-unused-dummy-argument -g -O0 
+Linkers:
+  Shared linker:   /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpicxx  -shared
+  Dynamic linker:   /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpicxx  -shared
+make:
+MPI:
+  Includes: -I/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/include
+BLAS/LAPACK: -Wl,-rpath,/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/lib -L/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/lib -lflapack -Wl,-rpath,/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/lib -L/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/lib -lfblas
+fblaslapack:
+X:
+  Library:  -lX11
+  Arch:     
+pthread:
+  Library:  -lpthread
+ssl:
+  Library:  -lssl -lcrypto
+valgrind:
+PETSc:
+  PETSC_ARCH: linux-dbg-Complex
+  PETSC_DIR: /home/henry/Desktop/PETSC/petsc-3.5.3
+  Clanguage: Cxx
+  shared libraries: enabled
+  Scalar type: complex
+  Precision: double
+  Memory alignment: 16
+xxx=========================================================================xxx
+ Configure stage complete. Now build PETSc libraries with (gnumake build):
+   make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg-Complex all
+xxx=========================================================================xxx 
+\end{verbatim}              \end{scriptsize}
+Creat the objects Files
+\begin{scriptsize}\begin{verbatim}
+ henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make
+.
+.
+.
+         CXX linux-dbg-Complex/obj/src/ts/impls/implicit/theta/theta.o
+         CXX linux-dbg-Complex/obj/src/ts/impls/implicit/theta/ftn-auto/thetaf.o
+         CXX linux-dbg-Complex/obj/src/ts/impls/implicit/alpha/alpha.o
+         CXX linux-dbg-Complex/obj/src/ts/impls/implicit/alpha/ftn-auto/alphaf.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/ts.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/tscreate.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/tsreg.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/tsregall.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/dlregists.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/tseig.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/ftn-auto/tsf.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/ftn-custom/ztscreatef.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/ftn-custom/ztsf.o
+         CXX linux-dbg-Complex/obj/src/ts/interface/ftn-custom/ztsregf.o
+         CXX linux-dbg-Complex/obj/src/ts/adapt/interface/tsadapt.o
+         CXX linux-dbg-Complex/obj/src/ts/adapt/interface/ftn-auto/tsadaptf.o
+         CXX linux-dbg-Complex/obj/src/ts/adapt/impls/cfl/adaptcfl.o
+         CXX linux-dbg-Complex/obj/src/ts/adapt/impls/none/adaptnone.o
+         CXX linux-dbg-Complex/obj/src/ts/adapt/impls/basic/adaptbasic.o
+          FC linux-dbg-Complex/obj/src/ts/f90-mod/petsctsmod.o
+         CXX linux-dbg-Complex/obj/src/tao/matrix/lmvmmat.o
+         CXX linux-dbg-Complex/obj/src/tao/matrix/adamat.o
+         CXX linux-dbg-Complex/obj/src/tao/matrix/submatfree.o
+         CXX linux-dbg-Complex/obj/src/tao/util/tao_util.o
+         CXX linux-dbg-Complex/obj/src/tao/util/ftn-auto/tao_utilf.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/taosolver.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/taosolver_fg.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/taosolverregi.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/taosolver_hj.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/taosolver_bounds.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/dlregistao.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/fdiff.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/fdtest.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/ftn-auto/taosolver_boundsf.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/ftn-auto/taosolver_fgf.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/ftn-auto/taosolver_hjf.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/ftn-auto/taosolverf.o
+         CXX linux-dbg-Complex/obj/src/tao/interface/ftn-custom/ztaosolverf.o
+         CXX linux-dbg-Complex/obj/src/tao/linesearch/interface/taolinesearch.o
+         CXX linux-dbg-Complex/obj/src/tao/linesearch/interface/dlregis_taolinesearch.o
+         CXX linux-dbg-Complex/obj/src/tao/linesearch/interface/ftn-auto/taolinesearchf.o
+         CXX linux-dbg-Complex/obj/src/tao/linesearch/interface/ftn-custom/ztaolinesearchf.o
+     CLINKER /home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/lib/libpetsc.so.3.5.3
+make[2]: Leaving directory `/home/henry/Desktop/PETSC/petsc-3.5.3'
+=========================================
+make[1]: Leaving directory `/home/henry/Desktop/PETSC/petsc-3.5.3'
+Now to check if the libraries are working do:
+make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg-Complex test
+=========================================
+\end{verbatim}              \end{scriptsize}
+Check if the library are working
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg-Complex test
+Running test examples to verify correct installation
+Using PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 and PETSC_ARCH=linux-dbg-Complex
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 1 MPI process
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 2 MPI processes
+Fortran example src/snes/examples/tutorials/ex5f run successfully with 1 MPI process
+Completed test examples
+=========================================
+Now to evaluate the computer systems you plan use - do:
+make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg-Complex streams NPMAX=<number of MPI processes you intend to use>
+\end{verbatim}              \end{scriptsize}
+Now we evaluate the computer system you plan to use:
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/petsc-3.5.3$ make PETSC_DIR=/home/henry/Desktop/PETSC/petsc-3.5.3 PETSC_ARCH=linux-dbg-Complex streams NPMAX=4
+cd src/benchmarks/streams; /usr/bin/make  --no-print-directory streams
+/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/bin/mpicxx -o MPIVersion.o -c -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g -O0  -fPIC    -I/home/henry/Desktop/PETSC/petsc-3.5.3/include -I/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg-Complex/include    `pwd`/MPIVersion.c
+Number of MPI processes 1
+Process 0 bluebottle
+Function      Rate (MB/s) 
+Copy:       11076.8118
+Scale:      10638.6912
+Add:        12522.6468
+Triad:      12336.1882
+Number of MPI processes 2
+Process 0 bluebottle
+Process 1 bluebottle
+Function      Rate (MB/s) 
+Copy:       12778.3848
+Scale:      12660.8554
+Add:        14196.9249
+Triad:      14360.4703
+Number of MPI processes 3
+Process 0 bluebottle
+Process 1 bluebottle
+Process 2 bluebottle
+Function      Rate (MB/s) 
+Copy:       12539.6763
+Scale:      12434.2251
+Add:        13975.9454
+Triad:      14031.1417
+Number of MPI processes 4
+Process 0 bluebottle
+Process 1 bluebottle
+Process 2 bluebottle
+Process 3 bluebottle
+Function      Rate (MB/s) 
+Copy:       12412.4117
+Scale:      12379.4968
+Add:        13801.3317
+Triad:      13867.5576
+------------------------------------------------
+np  speedup
+1 1.0
+2 1.16
+3 1.14
+4 1.12
+Estimation of possible speedup of MPI programs based on Streams benchmark.
+It appears you have 1 node(s)
+See graph in the file src/benchmarks/streams/scaling.png
+\end{verbatim}              \end{scriptsize}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=.8\textwidth, height=.4\textwidth]{complex_scaling.eps}
+    \caption*{PetscScalar: Evaluate the Computer System using Complex Numbers}
+    \label{checkerboard_lattice}
+\end{figure}
+
+\section{Use BASH file to untar, install and configure}
+\begin{verbatim}
+#!/bin/bash
+henry@bluebottle:~$ tar zxvf /Desktop/PETSC/petsc-3.5.3.tar.gz  # untar petsc on a particular folder
+cd Desktop/PETSC/petsc-3.5.3                                    # move to petsc folder
+export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+export PETSC_ARCH=linux-gnu-complex
+./configure PETSC_ARCH=linux-gnu-complex  --with-scalar-type=complex --download-fftw --with-debugging=1
+make
+make all test  # In one step:
+\end{verbatim}
+In two steps:
+\begin{verbatim}
+make all
+make test
+\end{verbatim}
+On this configuration:
+\begin{itemize}
+\item \verb+PETSC_ARCH=linux-gnu-complex+ give a name to configuration/build
+\item Complex number configutationis using: \verb+--with-scalar-type=complex+
+\item If BLAS, LAPACK, MPI are install already. The default system/compiler locations are availab via PATH. No need for these:  
+\begin{verbatim}
+--with-blas-lapack-dir=/usr/local/blaslapack
+--with-mpi-dir=/usr/local/mpich
+--with-cc=mpicc --with-cxx=mpicxx --with-fc=mpif90
+\end{verbatim}
+\item fftw is install but it is not setup for mpi. We hope the download of fftw will configure fftw for mpi, No need to include the PATH to fftw: \verb+--with-fftw-dir=/usr/include/+ 
+\end{itemize}
+
+\section{Compile and Execute Hello World Example}
+\subsection{On my Desktop PC}
+My Hello world c code:  \verb+example_hello_0_C.c+ 
+\begin{scriptsize}\begin{verbatim}
+#include <petsc.h>
+
+int main ( int argc, char *argv[] ){
+   PetscErrorCode ierr;
+   PetscMPIInt    rank, size;
+   
+   PetscInitialize(&argc, &argv, PETSC_NULL,PETSC_NULL);
+   ierr = MPI_Comm_size(PETSC_COMM_WORLD,&size);
+   CHKERRQ(ierr);  /* Checks error code, if non-zero it calls the error handler and then returns */
+   ierr = MPI_Comm_rank(PETSC_COMM_WORLD,&rank);
+   CHKERRQ(ierr);
+
+/* Prints to standard out, only from the first processor in the communicator. Calls from other processes are ignored.
+   Specifically designed to print the message once for all the processes */
+   
+   //PetscPrintf(PETSC_COMM_WORLD,"Number of processors = %d, rank = %d\n",size,rank);
+   //PetscPrintf(PETSC_COMM_WORLD, "Hello World from [%d] rank\n",rank); 
+
+/* Prints to standard out, from all processor in the communicator. Specifically designed to print the message from each of the processes*/ 
+   PetscPrintf(PETSC_COMM_SELF,"Hello World from [%d] rank\n",rank);  
+   PetscPrintf(PETSC_COMM_SELF,"Number of processors = %d, rank = %d\n",size,rank);
+
+   PetscFinalize();
+   return 0;
+}
+\end{verbatim}\end{scriptsize}
+Makefile file : \verb+Makefile+
+\begin{scriptsize}\begin{verbatim}
+CFLAGS	         = 
+FFLAGS	         = 
+CPPFLAGS         = 
+FPPFLAGS         =
+LOCDIR           = home/Desktop/PETSC/Examples/example_0/
+EXAMPLESC        = example_hello_0_C.c example_hello_1_C.c 
+EXAMPLESF        = example_hello_0_F.f 
+MANSEC           = example_0
+
+include ${PETSC_DIR}/conf/variables
+include ${PETSC_DIR}/conf/rules
+
+example_hello_0_C: example_hello_0_C.o  chkopts
+	-${CLINKER} -o out example_hello_0_C.o  ${PETSC_LIB}
+	${RM} example_hello_0_C.o
+
+example_hello_1_C: example_hello_1_C.o  chkopts
+	-${CLINKER} -o out example_hello_1_C.o  ${PETSC_LIB}
+	${RM} example_hello_1_C.o
+
+example_hello_0_F: example_hello_0_F.o  chkopts
+	-${CLINKER} -o example_hello_0_F example_hello_0_F.o  ${PETSC_LIB}
+	${RM} example_hello_0_F.o
+\end{verbatim}\end{scriptsize}
+Bash file: \verb+compile_and_execute.sh+
+\begin{scriptsize}\begin{verbatim}
+#!/bin/bash  
+export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+export PETSC_ARCH=linux-dbg
+make example_hello_0_C
+mpirun -np 4 out
+\end{verbatim}\end{scriptsize}
+Compile with using just the makefile 
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ export PETSC_DIR=~/Desktop/PETSC/petsc-3.5.3
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ make example_hello_0_C
+mpicc -fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -g3 -O0  -o example_hello_0_C example_hello_0_C.o  -Wl,-rpath,/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg/lib -L/home/henry/Desktop/PETSC/petsc-3.5.3/linux-dbg/lib  -lpetsc -llapack -lblas -lX11 -lpthread -lssl -lcrypto -Wl,-rpath,/usr/lib/openmpi/lib -L/usr/lib/openmpi/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/4.6 -L/usr/lib/gcc/x86_64-linux-gnu/4.6 -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -lmpi_f90 -lmpi_f77 -lgfortran -lm -lgfortran -lm -lgfortran -lm -lquadmath -lm -lmpi_cxx -lstdc++ -Wl,-rpath,/usr/lib/openmpi/lib -L/usr/lib/openmpi/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/4.6 -L/usr/lib/gcc/x86_64-linux-gnu/4.6 -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -ldl -lmpi -lopen-rte -lopen-pal -lnsl -
+lutil -lgcc_s -lpthread -ldl  
+/bin/rm -f example_hello_0_C.o
+\end{verbatim}\end{scriptsize}
+Execute Hello example
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ mpirun -np 4 example_hello_0_C
+/bin/rm -f example_hello_0_C.o
+Hello World from [0] rank
+Number of processors = 4, rank = 0
+Hello World from [1] rank
+Number of processors = 4, rank = 1
+Hello World from [2] rank
+Number of processors = 4, rank = 2
+Hello World from [3] rank
+Number of processors = 4, rank = 3
+\end{verbatim}\end{scriptsize}
+Compile and Execute using a bash file on my Desktop. Maybe you will need to change the permission of your bash file
+\begin{scriptsize}\begin{verbatim}
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ ./compile_and_execute.sh 
+bash: ./compile_and_execute.sh: Permission denied
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ chmod 777 compile_and_execute.sh 
+henry@bluebottle:~/Desktop/PETSC/Examples/example_0$ ./compile_and_execute.sh 
+\end{verbatim}\end{scriptsize}
+
+
+\subsection{On STAMPEDE}
+Since petsc is already installe and compile on Stapede. We just neeed to check how we can submit a job. of cource always is easy to start with a small program 
+\begin{description}
+\item \verb+example_hello_0_C.c+
+\begin{scriptsize}\begin{verbatim}
+#include <petsc.h>
+
+int main ( int argc, char *argv[] ){
+   PetscErrorCode ierr;
+   PetscMPIInt    rank, size;
+   
+   PetscInitialize(&argc, &argv, PETSC_NULL,PETSC_NULL);
+   ierr = MPI_Comm_size(PETSC_COMM_WORLD,&size);
+   CHKERRQ(ierr);  /* Checks error code, if non-zero it calls the error handler and then returns */
+   ierr = MPI_Comm_rank(PETSC_COMM_WORLD,&rank);
+   CHKERRQ(ierr);
+
+/* Prints to standard out, only from the first processor in the communicator. Calls from other processes
+are ignored. Specifically designed to print the message once for all the processes */
+
+   //PetscPrintf(PETSC_COMM_WORLD,"Number of processors = %d, rank = %d\n",size,rank);
+   //PetscPrintf(PETSC_COMM_WORLD, "Hello World from [%d] rank\n",rank); 
+
+/* Prints to standard out, from all processor in the communicator. Specifically designed to print the message from each of the processes*/ 
+   PetscPrintf(PETSC_COMM_SELF,"Hello World from [%d] rank\n",rank);  
+   PetscPrintf(PETSC_COMM_SELF,"Number of processors = %d, rank = %d\n",size,rank);
+
+   PetscFinalize();
+   return 0;
+} 
+\end{verbatim}\end{scriptsize}
+\item Makefile
+\begin{scriptsize}\begin{verbatim}
+CFLAGS	         = 
+FFLAGS	         = 
+CPPFLAGS         = 
+FPPFLAGS         =
+LOCDIR           = /home1/02817/hmoncada/CPS_5310/example_1
+EXAMPLESC        = example_hello_0_C.c  example_hello_1_C.c
+EXAMPLESF        =  
+MANSEC           = example_1
+
+include ${PETSC_DIR}/conf/variables
+include ${PETSC_DIR}/conf/rules
+
+example_hello_0_C: example_hello_0_C.o  chkopts
+	-${CLINKER} -o out example_hello_0_C.o  ${PETSC_LIB}
+	${RM} example_hello_0_C.o 
+	
+example_hello_1_C: example_hello_1_C.o  chkopts
+        -${CLINKER} -o out example_hello_1_C.o  ${PETSC_LIB}
+        ${RM} example_hello_1_C.o
+	
+\end{verbatim}\end{scriptsize}
+\item Batch
+\begin{scriptsize}\begin{verbatim}
+#!/bin/bash
+#SBATCH -A TG-ASC140011           # account name
+#SBATCH -J example_hello_0_C      # job name
+#SBATCH -o example_out.%j         # output file
+#SBATCH -e example_err.%j         # error file
+#SBATCH -N 1                      # total nodes requested
+#SBATCH -n 4                      # total MPI tasks requested
+#SBATCH -p serial                 # queue name
+#SBATCH -t 00:02:00               # total time requested <hh:mm:ss>
+
+module load petsc
+module list
+export PETSC_DIR=/opt/apps/intel13/mvapich2_1_9/petsc/3.5/
+export PETSC_ARCH=sandybridge
+make example_hello_0_C
+ibrun ./out > log.txt
+\end{verbatim}\end{scriptsize}
+\end{description}
+Compile and execute the hello example
+\begin{description}
+\item [1.] Open TERMINAL 1. On your laptop or desktop open a first Terminal. Login into stampede:
+\begin{scriptsize}\begin{verbatim}
+>> ssh user_name@stampede.tacc.utexas.edu
+or
+>> ssh user_name@login.xsede.org
+\end{verbatim}\end{scriptsize}
+\item [2.] Set your workspace
+\begin{scriptsize}\begin{verbatim}
+>> mkdir CPS_3510
+>> cd CPS_3510
+>> mkdir example
+>> cd example
+\end{verbatim}\end{scriptsize}
+\item [3.] Open TERMINAL 2.  Copy all the file on this email into the folder example.
+On your laptop or desktop open a second Terminal. Next, Go to the folder where you have or save this files. 
+\begin{description}
+ \item [3.1] On that folder you call sftp
+\begin{scriptsize}\begin{verbatim}
+>> sftp  user_name@stampede.tacc.utexas.edu
+or
+>> sftp  user_name@login.xsede.org
+\end{verbatim}\end{scriptsize}
+\item [3.2] Look for the folder where you want to save this files
+\begin{scriptsize}\begin{verbatim}
+>> cd CPS_3510
+>> cd example
+>> put *
+>> ls
+>> exit
+\end{verbatim}\end{scriptsize}
+How to use \verb+put+ and \verb+get+. Please see \textbf{Transferring Files with SFTP} below
+\end{description}
+\item [4.] ON TERMINAL 1.  Compile and execute
+\begin{scriptsize}\begin{verbatim}
+>> sbatch job
+-----------------------------------------------------------------
+              Welcome to the Stampede Supercomputer              
+-----------------------------------------------------------------
+
+--> Verifying valid submit host (login4)...OK
+--> Verifying valid jobname...OK
+--> Enforcing max jobs per user...OK
+--> Verifying availability of your home dir (/home1/02817/hmoncada)...OK
+--> Verifying availability of your work dir (/work/02817/hmoncada)...OK
+--> Verifying availability of your scratch dir (/scratch/02817/hmoncada)...OK
+--> Verifying valid ssh keys...OK
+--> Verifying access to desired queue (serial)...OK
+--> Verifying job request is within current queue limits...OK
+--> Checking available allocation (TG-ASC140011)...OK
+Submitted batch job 5396653
+\end{verbatim}\end{scriptsize}
+check your job
+\begin{scriptsize}\begin{verbatim}
+>> squeue -u  5396653
+             JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+\end{verbatim}\end{scriptsize}
+or
+\begin{scriptsize}\begin{verbatim}
+>> squeue -u hmoncada
+             JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           5396653      serial fdder_Pe hmoncada PD       0:00      1 (Resources)
+\end{verbatim}\end{scriptsize}          
+
+\item [5.] Wait for around 5 min. Next \verb+job.txt+ is the final output 
+\begin{scriptsize}\begin{verbatim}
+>> vi job.txt
+\end{verbatim}\end{scriptsize}
+\end{description}
+\section{Transferring Files with SFTP}
+\subsection{Transferring Remote Files to the Local System}
+If we would like download files from our remote host, we can do so by issuing the following command:
+\begin{verbatim}
+get remoteFile 
+\end{verbatim}
+\begin{verbatim}
+Fetching /home/demouser/remoteFile to remoteFile
+/home/demouser/remoteFile                       100%   37KB  36.8KB/s   00:01
+\end{verbatim}
+As you can see, by default, the \verb+"get"+ command downloads a remote file to a file with the same name on the local file system.
+We can copy the remote file to a different name by specifying the name afterwards:
+\begin{verbatim}
+get remoteFile localFile 
+\end{verbatim}
+The \verb+"get"+ command also takes some option flags. For instance, we can copy a directory and all of its contents by specifying the recursive option:
+\begin{verbatim}
+get -r someDirectory 
+\end{verbatim}
+We can tell SFTP to maintain the appropriate permissions and access times by using the \verb+"-P"+ or \verb+"-p"+ flag:
+\begin{verbatim}
+get -Pr someDirectory 
+\end{verbatim}
+\subsection{Transferring Local Files to the Remote System}
+Transferring files to the remote system is just as easily accomplished by using the appropriately named "put" command:
+\begin{verbatim}
+put localFile
+
+Uploading localFile to /home/demouser/localFile
+localFile                                     100% 7607     7.4KB/s   00:00 
+\end{verbatim}
+The same flags that work with \verb+"get"+ apply to \verb+"put"+. So to copy an entire local directory, you can issue:
+\begin{verbatim}
+put -r localDirectory
+\end{verbatim}
+One familiar tool that is useful when downloading and uploading files is the "df" command, which works similar to the command line version. Using this, you can check that you have enough space to complete the transfers you are interested in:
+\begin{verbatim}
+df -h
+
+    Size     Used    Avail   (root)    %Capacity
+  19.9GB   1016MB   17.9GB   18.9GB           4%
+\end{verbatim}
+Please note, that there is no local variation of this command, but we can get around that by issuing the \verb+"!"+ command.
+
+The \verb+"!"+ command drops us into a local shell, where we can run any command available on our local system. We can check disk usage by typing:
+\begin{verbatim}
+!
+df -h
+
+Filesystem      Size   Used  Avail Capacity  Mounted on
+/dev/disk0s2   595Gi   52Gi  544Gi     9%    /
+devfs          181Ki  181Ki    0Bi   100%    /dev
+map -hosts       0Bi    0Bi    0Bi   100%    /net
+map auto_home    0Bi    0Bi    0Bi   100%    /home
+\end{verbatim}
+Any other local command will work as expected. To return to your SFTP session, type:
+\begin{verbatim}
+exit 
+\end{verbatim}
+
+
+You should now see the SFTP prompt return.
+
+
+
+\end{document}

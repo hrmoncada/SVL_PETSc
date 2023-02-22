@@ -1,0 +1,37 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Check you PC}{}% 2
+\BOOKMARK [1][-]{section.3}{PETSc}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{PETSC Features}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{PETSC Configuration}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{PETSC\137DIR and PETSC\137ARCH}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Set PETSC\137DIR and PETSC\137ARCH}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{PETSc - Before Start}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{PETSc - Already is nstalled your PC}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{PETSc Download}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{PETSc Need The Following Packages and Compiler}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Install openmpi \046 mpich2}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Start PETSC configuration}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Setting up configurations}{section.6}% 14
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Configuration with BLAS, LAPACK and MPI}{subsection.6.1}% 15
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Modes to add external package}{subsection.6.1}% 16
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Configuration with BLAS, LAPACK and MPI, FFTW and Scalapack}{subsection.6.1}% 17
+\BOOKMARK [2][-]{subsection.6.2}{FFTW}{section.6}% 18
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Configuration with BLAS,LAPACK and MPI, FFTW, Scalapack with Complex number}{subsection.6.2}% 19
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Configuration with BLAS, LAPACK and MPI and FFTW and Complex Numbers}{subsection.6.2}% 20
+\BOOKMARK [1][-]{section.7}{Build your PETSc configuration}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Before you start your installation}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{bluebottle : Install petsc-3.5.4}{}% 23
+\BOOKMARK [1][-]{section.9}{bluebottle : Installation petsc-3.5.4 - To be Review}{}% 24
+\BOOKMARK [2][-]{subsection.9.1}{A new Folder is create}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.2}{Now to check if the libraries are working}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.3}{Use BASH file to untar, install and configure petsc-3.5.4}{section.9}% 27
+\BOOKMARK [1][-]{section.10}{Fiona : Install petsc-3.5.4}{}% 28
+\BOOKMARK [1][-]{section.11}{Fiona : Install Petsc-3.7.6}{}% 29
+\BOOKMARK [1][-]{Item.49}{Appendices}{}% 30
+\BOOKMARK [1][-]{appendix.A}{Compile and Execute Hello World Example}{}% 31
+\BOOKMARK [2][-]{subsection.A.1}{On my Desktop PC}{appendix.A}% 32
+\BOOKMARK [1][-]{appendix.B}{Get Examples for PETSC}{}% 33
+\BOOKMARK [2][-]{subsection.B.1}{On STAMPEDE}{appendix.B}% 34
+\BOOKMARK [1][-]{appendix.C}{Transferring Files with SFTP}{}% 35
+\BOOKMARK [2][-]{subsection.C.1}{Transferring Remote Files to the Local System}{appendix.C}% 36
+\BOOKMARK [2][-]{subsection.C.2}{Transferring Local Files to the Remote System}{appendix.C}% 37

@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{QUICK START ON STAMPEDE 2}{}% 2
+\BOOKMARK [1][-]{section.3}{SVL AT STAMPEDE 2}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Log in}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Makefile}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Batch}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{TACC - Stampede Feature}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{SVL Feature}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{TACC STAMPEDE2 SHARED FILE SYSTEM}{}% 9
+\BOOKMARK [1][-]{section.5}{TACC STAMPEDE2 - TECHNICAL SPECIFICATIONS}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{KNL AND SKX ARCHITECTURE}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{ARCHITECTURE-SPECIFIC FLAGS}{}% 12
+\BOOKMARK [1][-]{section.7}{ACCOUNT-LEVEL DIAGNOSTICS}{}% 13
+\BOOKMARK [2][-]{subsection.7.1}{TAU - STAMPEDE2}{section.7}% 14
+\BOOKMARK [1][-]{section.8}{SVL AT STAMPEDE 1 - System and user guide are now obsolete}{}% 15
+\BOOKMARK [2][-]{subsection.8.1}{mpiP on STAMPEDE1}{section.8}% 16
+\BOOKMARK [2][-]{subsection.8.2}{FFTW on STAMPEDE1}{section.8}% 17
+\BOOKMARK [2][-]{subsection.8.3}{PETSc Linking}{section.8}% 18
+\BOOKMARK [2][-]{subsection.8.4}{PETSC on STAMPEDE1}{section.8}% 19
+\BOOKMARK [1][-]{subsection.8.4}{Appendices}{}% 20
+\BOOKMARK [1][-]{appendix.A}{First appendix}{}% 21
+\BOOKMARK [1][-]{appendix.B}{Second appendix}{}% 22
